@@ -110,3 +110,6 @@ Or like these demos:
 ### [Demo 3](http://hictech.github.io/cssPlusWebsite/demo3.html)  &nbsp;
 ### [Demo 4](http://hictech.github.io/cssPlusWebsite/demo4.html)  &nbsp;
 ### [Mobile demo](http://hictech.github.io/cssPlusWebsite/mobile_demo.html)  &nbsp;
+
+
+<img alt="css+ ui" src="http://hictech.github.io/cssPlusWebsite/img/mobile_demo_qrcode.jpg" width="100px" height="100px" title="css+ ui"/>
