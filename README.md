@@ -100,6 +100,9 @@ Whit css+ you can create flexible layout like this:
 </div>
 ```
 
+
+<a href="http://sailsjs.org"><img alt="css+ ui" src="http://hictech.github.io/cssPlusWebsite/img/ui_example.png" title="css+ ui"/></a>
+
 Or like these demos:
 ### [Demo 1](http://hictech.github.io/cssPlusWebsite/demo.html)  &nbsp;
 ### [Demo 2](http://hictech.github.io/cssPlusWebsite/demo2.html)  &nbsp;
