@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CSS Flexbox</title>
+    <link href="source/flex_layout-0.1.css" rel="stylesheet">
+
+</head>
+
+<style>
+    .COL, .ROW, .ROW-FLEX, .COL-FLEX {
+        box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+<body>
+
+
+<div class="EXTENDER">
+
+    <div class="PADDER35">
+        <div class="COLS">
+            <div class="COL ROWS CENTER" style="width:80px">
+                <div class="ROW">
+                    <small>centered row</small>
+                </div>
+            </div>
+            <div class="COL-FLEX ROWS">
+                <div class="ROW COLS CENTER" style="height:50px">
+                    <div class="COL" style="width:70px">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <small>button</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="COL" style="width:70px">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <small>button</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="COL" style="width:70px">
+                        <div class="EXTENDER">
+                            <div class="PADDER-CENTER">
+                                <small>button</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ROW-FLEX COLS">
+                    <div class="COL" style="width:80px">
+                        <div class="EXTENDER">
+
+                            <div class="ROWS CENTER END">
+                                <div class="ROW">
+                                    <small>bottom row</small>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="COL-FLEX">
+
+                        <div class="EXTENDER">
+
+                            <div class="PADDER-CENTER">
+                                <div style="border:solid 1px; width:80px; height:100px"><small>centered element</small></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="COL" style="width:80px">
+                        <div class="EXTENDER">
+
+                            <div class="ROWS CENTER START">
+                                <div class="ROW">
+                                    <small>top row</small>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="ROW COLS END" style="height:70px">
+                    <div class="COL" style="width:50px">
+
+                    </div>
+                    <div class="COL" style="width:50px"></div>
+                    <div class="COL" style="width:50px"></div>
+                </div>
+            </div>
+            <div class="COL ROWS CENTER" style="width:200px">
+
+                <div class="ROW COLS CENTER" style="height:70px">
+                    <div class="COL" style="width:20px"></div>
+                    <div class="COL" style="width:20px"></div>
+                    <div class="COL" style="width:20px"></div>
+                </div>
+                <div class="ROW COLS" style="height:70px">
+                    <div class="COL-FLEX">
+
+                        <div class="EXTENDER">
+
+                        </div>
+
+                    </div>
+                    <div class="COL-FLEX">
+                        <div class="EXTENDER">
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="COL ROWS" style="width:200px">
+                <div class="ROW">
+
+                </div>
+                <div class="ROW-FLEX"></div>
+                <div class="ROW COLS" style="height:300px">
+                    <div class="COL-FLEX ROWS">
+                        <div class="ROW" style="height:30px"></div>
+                        <div class="ROW-FLEX"></div>
+                        <div class="ROW" style="height:30px"></div>
+                    </div>
+                    <div class="COL" style="width:40px">
+                    </div>
+                    <div class="COL ROWS END" style="width:80px">
+                        <div class="ROW" style="height:20px"></div>
+                        <div class="ROW" style="height:20px"></div>
+                        <div class="ROW" style="height:20px"></div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--
+
+
+
+
+-->
+
+
+</body>
+
+</html>
