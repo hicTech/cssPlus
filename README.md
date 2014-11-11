@@ -112,5 +112,5 @@ Or like these demos:
 ### [Mobile demo](http://hictech.github.io/cssPlusWebsite/mobile_demo.html)  &nbsp;
 
 
-Try on your phone:
+Try on your phone:<br>
 <img alt="css+ ui" src="http://hictech.github.io/cssPlusWebsite/img/mobile_demo_qrcode.jpg" width="200px" height="200px" style="margin:0px auto" title="css+ ui"/>
