@@ -12,7 +12,7 @@ Css Plus want to provide a simple and fast way to realize flexible layout based 
 ## Usage
 
 Add this css file:
-```ht
+```html
 <link rel="stylesheet" href="source/flex_layout-0.1.css">
 ```
 Done!
