@@ -1,14 +1,18 @@
 <h1>
-<a href="http://sailsjs.org"><img alt="css+ logo" src="http://hictech.github.io/cssPlusWebsite/img/cssPlusLogo.png" title="css+"/></a>
+<a href="http://hictech.github.io/cssPlusWebsite/"><img alt="css+ logo" src="http://hictech.github.io/cssPlusWebsite/img/cssPlusLogo.png" title="css+"/></a>
 </h1>
 
 <h4>Robust, fast and cross browser layout scaffolding based on Flexbox</h4>
 
-### [Website](http://sailsjs.org/)  &nbsp; [Getting Started](http://sailsjs.org/#!getStarted) &nbsp;  [Docs](http://sailsjs.org/#!documentation)  &nbsp; [Submit Issue](https://github.com/balderdashy/sails/blob/master/README.md#issue-submission)
+### [Website](http://hictech.github.io/cssPlusWebsite/)
 
 
 Css Plus want to provide a simple and fast way to realize flexible layout based on flexbox modeling. This awesome css feature lets you specify a flexible container within which direct children can be also flexible and float as columns or rows.
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://hictech.github.io/cssPlusWebsite/" data-text="Robust, fast and cross browser layout scaffolding based on Flexbox." data-via="HicTechSRL">Tweet</a>
+                                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+                                    <a href="https://twitter.com/HicTechSRL" class="twitter-follow-button" data-show-count="false">Follow @HicTechSRL</a>
+                                                                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 ## Usage
 
 Add this css file:
@@ -19,9 +23,6 @@ Done!
 
 Whit css+ you can create flexible layout like this:
 
-<h1>
-<a href="http://sailsjs.org"><img alt="css+ ui" src="http://hictech.github.io/cssPlusWebsite/img/ui_example.png" title="css+ ui"/></a>
-</h1>
 
 
 ```html
@@ -101,3 +102,9 @@ Whit css+ you can create flexible layout like this:
     </div>
 </div>
 ```
+
+Or like these demos:
+### [Demo 1](http://hictech.github.io/cssPlusWebsite/demo.html)  &nbsp;
+### [Demo 2](http://hictech.github.io/cssPlusWebsite/demo2.html)  &nbsp;
+### [Demo 3](http://hictech.github.io/cssPlusWebsite/demo3.html)  &nbsp;
+### [Demo 4](http://hictech.github.io/cssPlusWebsite/demo4.html)  &nbsp;
