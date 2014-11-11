@@ -9,6 +9,7 @@
 
 
 Css Plus want to provide a simple and fast way to realize flexible layout based on flexbox modeling. This awesome css feature lets you specify a flexible container within which direct children can be also flexible and float as columns or rows.
+<a href="http://hictech.github.io/cssPlusWebsite/">More informations</a>
 
 ## Usage
 
