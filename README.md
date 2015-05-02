@@ -15,7 +15,7 @@ Css Plus want to provide a simple and fast way to realize flexible layout based 
 
 ## Thanks
 <a href="https://www.browserstack.com" target="_blanck"><img alt="browserStack" src="http://hictech.github.io/cssPlusWebsite/LogoBrowserStack.png" title="browserStack" width="150px"/></a><br>
-I really want to thank <strong><a href="https://www.browserstack.com" target="_blank">BrowserStack</a></strong> guys because they let me use their amazing platform for free
+I really want to thank <strong><a href="https://www.browserstack.com" target="_blank">BrowserStack</a></strong> guys because they let me use their amazing platform for free!
 
 ## Usage
 
