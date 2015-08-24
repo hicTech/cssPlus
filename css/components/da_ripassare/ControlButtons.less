@@ -1,0 +1,50 @@
+/*
+  This allows to place 2,3 or 4 buttons in the same row that fit all the available width.
+  This is useful for bottons at the and of a form, at the bottom of a modal window, in popup windows,
+  or inside a confirm box, alert and similars.
+*/
+.ControlButtons {
+  width: 100%;
+  margin: 0px auto;
+  overflow: auto;
+  padding: 20px 0px;
+
+  .ControlButton {
+    float: left;
+    text-align: center;
+
+    .Button {
+      margin: 0px;
+      max-width: 450px;
+      width: 90%;
+      @media @onlyScreen and @smallmobile, @mobile {
+        width: 97%;
+      }
+    }
+  }
+
+  .ControlButton:first-child:nth-last-child(n+2),
+  .ControlButton:first-child:nth-last-child(n+2) ~ * {
+    width: 50%;
+  }
+
+  .ControlButton:first-child:nth-last-child(n+3),
+  .ControlButton:first-child:nth-last-child(n+3) ~ * {
+    width: 33.33333%;
+    @media @onlyScreen and @smallmobile, @mobile {
+      font-size: @font-size-small - 0.075;
+    }
+  }
+
+  .ControlButton:first-child:nth-last-child(n+4),
+  .ControlButton:first-child:nth-last-child(n+4) ~ * {
+    width: 25%;
+    @media @onlyScreen and @smallmobile, @mobile {
+      .Button{
+        .Button.tiny();
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,88 @@
+
+
+// SectionsAppController icons
+@app-controller-icon-size-small-screen:         1.333em;
+@app-controller-icon-size:                      1.666em;
+@app-controller-icon-size-large-screen:         2em;
+@app-controller-icon-size-extralarge-screen:    2.333em;
+
+
+.AppControllerButton{
+  &._module{
+    >._padder{
+      >._wrapper{
+        >._frame{
+          .EXTENDER();
+
+
+          @media @onlyScreen and @smallmobile, @mobile {
+            line-height: @line-height-small;
+          }
+
+          .Icon{
+            .Icon(@app-controller-icon-size);
+          }
+          @media @onlyScreen and @smallmobile, @mobile {
+            .Icon {
+              .Icon(@app-controller-icon-size-small-screen);
+            }
+
+            .label{
+              font-size: 0.8em;
+            }
+          }
+
+          @media @onlyScreen and @desktop {
+            .Icon {
+              .Icon(@app-controller-icon-size-large-screen);
+            }
+          }
+
+          @media @onlyScreen and @wide {
+            .Icon {
+              .Icon(@app-controller-icon-size-extralarge-screen);
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+
+  &.active{
+    background-color: rgba(0,0,0,0.35);
+
+    .PADDER-CENTER::after {
+      content: "";
+      position: absolute;
+      right: -27px;
+      width: 30px;
+      height: 30px;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 40%;
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.8);
+
+      @media @onlyScreen and @smallmobile, @mobile {
+        display: none;
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+  }
+
+
+
+
+

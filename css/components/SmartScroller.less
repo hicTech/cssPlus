@@ -1,0 +1,106 @@
+
+
+
+
+
+//template
+.SmartScrollerWrapper {
+  &._module {
+
+
+
+    @header-height:40px;
+    @footer-height:40px;
+
+    @min-height:100px;
+
+    > ._padder {
+      > ._wrapper {
+        /* <------------------------- can be .loading or .overlay */
+        background-color: @bg-color-L1;
+        > ._frame {
+            .EXTENDER();
+
+
+
+
+
+
+
+          .SmartScroller{
+
+            &._module{
+              .EXTENDER();
+
+              ._padder{
+                .EXTENDER();
+
+
+
+                  ._wrapper{
+                    .PADDER-CENTER();
+
+
+
+                    ._frame{
+
+
+                      .ROWS();
+                      height: auto;
+                      width: auto;
+                      max-height: 100%;
+
+
+                      .SmartScroller-header,
+                      .SmartScroller-footer {
+                        .CELL();
+                        color: @t-color-white;
+                        margin: 0px auto;
+                      }
+
+                      .SmartScroller-header{
+                        height: @header-height;
+                        width: 100%;
+                        background-color: rgba(0,0,0,0.1);
+                      }
+
+
+                      .SmartScroller-footer {
+                        height: @footer-height;
+                        width: 100%;
+                        background-color: rgba(0,0,0,0.1);
+                      }
+
+                      .SmartScroller-scrollerZone {
+
+                        background-color: #ADFF2F;
+                        clear: both;
+                        overflow: auto;
+                        margin: 0px auto;
+
+                        width: 100%;
+                        max-height: 100%;
+                        min-height: 150px;
+                        min-width: 200px;
+                      }
+
+                    }
+                  }
+
+
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
+
+
