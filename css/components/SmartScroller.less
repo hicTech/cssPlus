@@ -1,0 +1,64 @@
+
+
+
+//template
+.SmartScroller {
+  &._module {
+
+    @width:60%;
+
+    @header-height:40px;
+    @footer-height:40px;
+
+    @min-height:100px;
+
+    > ._padder {
+      .PADDER0();
+      > ._wrapper {
+        /* <------------------------- can be .loading or .overlay */
+        background-color: @bg-color-L1;
+        > ._frame {
+          .PADDER-CENTER();
+          .ROWS();
+
+          .SmartScroller-header,
+          .SmartScroller-footer {
+            .CELL();
+            color: @t-color-white;
+            margin: 0px auto;
+          }
+
+          .SmartScroller-header{
+            height: @header-height;
+            width: @width;
+            background-color: rgba(0,0,0,0.1);
+          }
+
+
+          .SmartScroller-footer {
+            height: @footer-height;
+            width: @width;
+            background-color: rgba(0,0,0,0.1);
+          }
+
+          .SmartScroller-scrollerZone {
+            width: @width;
+            max-height: 100%;
+            min-height: @min-height;
+            background-color: greenyellow;
+            clear: both;
+            overflow: auto;
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
+
+

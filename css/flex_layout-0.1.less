@@ -1,0 +1,427 @@
+
+
+  .ROWS{
+    .wh(100%);
+    .displayFlex();
+    .boxDirection();
+    .directionCol();
+    .flexWrap();
+    .alignContent();
+
+    > .CELL{
+      .ROW();
+    }
+
+    > .CELL-FLEX{
+      .ROW-FLEX();
+    }
+  }
+
+  .COLS{
+    .wh(100%);
+    .displayFlex();
+    .boxDirection();
+    .directionRow();
+    .flexWrap();
+    .alignContent();
+
+    > .CELL{
+      .COL();
+    }
+
+    > .CELL-FLEX{
+      .COL-FLEX();
+    }
+  }
+
+
+  .CELL{
+    .rel();
+    .noFlex();
+  }
+
+  .CELL-FLEX{
+    .rel();
+    overflow: hidden;
+    .flex(1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+                  _        _
+   ___ ___  _ __ | |_ __ _(_)_ __   ___ _ __ ___
+  / __/ _ \| '_ \| __/ _` | | '_ \ / _ \ '__/ __|
+ | (_| (_) | | | | || (_| | | | | |  __/ |  \__ \
+  \___\___/|_| |_|\__\__,_|_|_| |_|\___|_|  |___/
+
+*/
+
+
+
+
+
+.EXTENDER, .EX {
+  .abs();
+  .trbl(0px);
+  .wh(100%);
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+//TODO some old android browser do not support overflow-y:scroll (maybe we have to add iScroll or similar solution?)
+
+.SCROLLABLE{
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  .abs();
+  .wh(100%);
+}
+
+
+.EXTENDER.scroll-x {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.EXTENDER.scroll-x > div {
+  display: inline-block;
+}
+
+.PADDER(@v:0){
+  .abs();
+  .trbl(@v);
+}
+
+
+.PADDER0 { .PADDER(0px); }
+
+.PADDER,
+.PADDER10 { .PADDER(10px);}
+.PADDER5 { .PADDER(5px); }
+.PADDER15 { .PADDER(15px); }
+.PADDER25 { .PADDER(25px); }
+.PADDER35 { .PADDER(35px); }
+.PADDER45 { .PADDER(45px); }
+.PADDER55 { .PADDER(55px); }
+.PADDER-CENTER, .P-C {
+  .wh(100%);
+  .displayFlex();
+  .boxPack(center);
+  .justifyContent();
+  .boxAlign();
+}
+
+.FITTER{
+  .rel();
+  .wh(100%);
+}
+
+/*
+  _ __ _____      _____
+ | '__/ _ \ \ /\ / / __|
+ | | | (_) \ V  V /\__ \
+ |_|  \___/ \_/\_/ |___/
+
+
+*/
+
+  /*
+.ROWS {
+  .wh(100%);
+  .displayFlex();
+  .boxDirection();
+  .directionCol();
+  .flexWrap();
+  .alignContent();
+}
+*/
+
+
+.ROW-FLEX {
+  .rel();
+  overflow: hidden;
+  .flex(1);
+}
+
+.ROW-FLEX2 {
+  .rel();
+  overflow: hidden;
+  .flex(2);
+}
+
+.ROW-FLEX3 {
+  .rel();
+  overflow: hidden;
+  .flex(3);
+}
+
+.ROW-FLEX4 {
+  .rel();
+  overflow: hidden;
+  .flex(4);
+}
+
+.ROW-FLEX5 {
+  .rel();
+  overflow: hidden;
+  .flex(5);
+}
+
+.ROW-FLEX6 {
+  .rel();
+  overflow: hidden;
+  .flex(6);
+}
+
+.ROW {
+  .rel();
+  .w(100%);
+  .noFlex();
+}
+
+
+/*
+            _
+   ___ ___ | |___
+  / __/ _ \| / __|
+ | (_| (_) | \__ \
+  \___\___/|_|___/
+
+*/
+
+  /*
+.COLS {
+  .wh(100%);
+  .displayFlex();
+  .boxDirection();
+  .directionRow();
+  .flexWrap();
+  .alignContent();
+}
+*/
+
+.COL-FLEX {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(1);
+}
+
+.COL-FLEX2 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(2);
+}
+
+.COL-FLEX2_5 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(2.5);
+}
+
+.COL-FLEX3 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(3);
+}
+
+.COL-FLEX4 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(4);
+}
+
+.COL-FLEX5 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(5);
+}
+
+.COL-FLEX6 {
+  .rel();
+  .h(auto);
+  overflow: hidden;
+  .flex(6);
+}
+
+.COL {
+  .rel();
+  .noFlex();
+}
+
+/* ONLY FOR IE10 */
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .COL {
+    .h(100%);
+  }
+}
+
+/*
+        _ _                                  _
+   __ _| (_) __ _ _ __  _ __ ___   ___ _ __ | |_ ___
+  / _` | | |/ _` | '_ \| '_ ` _ \ / _ \ '_ \| __/ __|
+ | (_| | | | (_| | | | | | | | | |  __/ | | | |_\__ \
+  \__,_|_|_|\__, |_| |_|_| |_| |_|\___|_| |_|\__|___/
+            |___/
+*/
+
+.CENTER {
+  .boxPack(center);
+}
+
+.START {
+  .boxPack(start);
+}
+
+.END {
+  .boxPack(end);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+        _     _                    _       _   _
+   __ _| |__ | |__  _ __ _____   _(_) __ _| |_(_) ___  _ __  ___
+  / _` | '_ \| '_ \| '__/ _ \ \ / / |/ _` | __| |/ _ \| '_ \/ __|
+ | (_| | |_) | |_) | | |  __/\ V /| | (_| | |_| | (_) | | | \__ \
+  \__,_|_.__/|_.__/|_|  \___| \_/ |_|\__,_|\__|_|\___/|_| |_|___/
+
+*/
+
+
+
+
+.alignContent{
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.flexWrap{
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.boxDirection{
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+}
+
+
+.directionRow{
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.directionCol{
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.boxAlign{
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.flex(@v){
+  /* Old Syntax */
+  -webkit-box-flex: @v;
+  -moz-box-flex: @v;
+  /* New Syntax */
+  -webkit-flex: @v;
+  flex: @v;
+  -ms-flex: @v;
+}
+
+.noFlex{
+  -webkit-box-ordinal-group: none;
+  -moz-box-ordinal-group: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex:none;
+  flex: none;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+
+
+.boxPack(@v){
+  -webkit-box-pack: @v;
+  -moz-box-pack: @v;
+  -webkit-flex-pack: @v;
+  -ms-flex-pack: @v;
+  -ms-flex-align: @v;
+  box-pack: @v;
+  box-align: @v;
+}
+
+.displayFlex{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+.justifyContent{
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+

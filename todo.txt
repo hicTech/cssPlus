@@ -1,0 +1,14 @@
+menu
+http://tympanus.net/Tutorials/AnimatedBorderMenus/index.html
+
+widgets
+http://codepen.io/virgilpana/pen/gpPvgr
+
+transictions:
+http://tympanus.net/Development/PageTransitions/
+
+pages folding:
+http://tympanus.net/Tutorials/FullscreenBookBlock/
+
+animated icons:
+http://tympanus.net/Development/AnimatedSVGIcons/

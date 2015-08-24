@@ -1,0 +1,134 @@
+//template
+.moduleNameExampleTest{
+  &._module{
+    >._padder{
+      /* .PADDER0(); */
+      >._wrapper{ /* <------------------------- can be .loading or .overlay */
+        /* .EXTENDER(); */
+        >._frame{
+
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+._module {
+  >._padder{
+    .PADDER(0px);
+    >._wrapper {
+      .EXTENDER();
+      &.loading{
+        >._frame{
+          .blurEffect();
+        }
+
+        &:before {
+          font-family: 'FontAwesome';
+          content: "\f021";
+          color: rgba(255,255,255,1);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          font-size: @font-size-medium;
+          margin-top: (@font-size-medium * (-1)) / 1.1;
+          margin-left: (@font-size-medium * (-1)) / 2;
+          font-weight: normal;
+          -webkit-animation: loading-spin 1.5s infinite linear;
+          animation: loading-spin 1.5s infinite linear;
+          z-index: 1000;
+        }
+
+        &:after {
+          content: "";
+          .EXTENDER();
+          display: flex;
+          box-pack: center;
+          box-align: center;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          color: #ffffff;
+          .PADDER-CENTER();
+          background-color: rgba(0, 0, 0, 0.35);
+          z-index: 900;
+        }
+      }
+
+      &.overlay{
+        >._frame{
+          .blurEffect();
+        }
+
+        &:after {
+          content: "";
+          .EXTENDER();
+          display: flex;
+          box-pack: center;
+          box-align: center;
+          -webkit-box-align: center;
+          -moz-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+          color: #ffffff;
+          .PADDER-CENTER();
+          background-color: rgba(0, 0, 0, 0.35);
+          z-index: 900;
+        }
+      }
+
+      @-webkit-keyframes loading-spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg)
+        }
+      }
+
+      @keyframes loading-spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg)
+        }
+        100% {
+          -webkit-transform: rotate(359deg);
+          transform: rotate(359deg)
+        }
+      }
+
+      .blurEffect {
+        filter: blur(3px); /* Someday, sigh ... */
+        -webkit-filter: blur(3px); /* Prefixed CSS3 blur filters */
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5'); /* IE lte 9 */
+      }
+    }
+  }
+
+
+
+
+
+
+}
+
+
+
+
+

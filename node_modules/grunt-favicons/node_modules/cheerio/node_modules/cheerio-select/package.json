@@ -1,0 +1,51 @@
+{
+  "name": "cheerio-select",
+  "version": "0.0.3",
+  "description": "Selector engine for cheerio",
+  "keywords": [],
+  "author": {
+    "name": "Matt Mueller",
+    "email": "mattmuelle@gmail.com"
+  },
+  "dependencies": {
+    "CSSselect": "0.x"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "cheerio": "*",
+    "expect.js": "*",
+    "underscore": "*"
+  },
+  "main": "index",
+  "engines": {
+    "node": ">= 0.4.7"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "_npmUser": {
+    "name": "mattmueller",
+    "email": "mattmuelle@gmail.com"
+  },
+  "_id": "cheerio-select@0.0.3",
+  "optionalDependencies": {},
+  "_engineSupported": true,
+  "_npmVersion": "1.1.16",
+  "_nodeVersion": "v0.6.6",
+  "_defaultsLoaded": true,
+  "dist": {
+    "shasum": "3f2420114f3ccb0b1b075c245ccfaae5d617a388",
+    "tarball": "http://registry.npmjs.org/cheerio-select/-/cheerio-select-0.0.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "mattmueller",
+      "email": "mattmuelle@gmail.com"
+    }
+  ],
+  "directories": {},
+  "_shasum": "3f2420114f3ccb0b1b075c245ccfaae5d617a388",
+  "_resolved": "https://registry.npmjs.org/cheerio-select/-/cheerio-select-0.0.3.tgz",
+  "_from": "cheerio-select@*",
+  "readme": "ERROR: No README data found!"
+}

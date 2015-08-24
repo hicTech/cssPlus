@@ -1,0 +1,237 @@
+/*
+            _                        _
+   _____  _| |_ ___ _ __ _ __   __ _| |___
+  / _ \ \/ / __/ _ \ '__| '_ \ / _` | / __|
+ |  __/>  <| ||  __/ |  | | | | (_| | \__ \
+  \___/_/\_\\__\___|_|  |_| |_|\__,_|_|___/
+
+
+*/
+@import   "externals/css/initializr/main.css";
+@import   "externals/css/initializr/normalize.min.css";
+@import   "externals/less/even.less";
+
+
+
+
+/*
+                                  _
+   __ _  ___ _ __   ___ _ __ __ _| |___
+  / _` |/ _ \ '_ \ / _ \ '__/ _` | / __|
+ | (_| |  __/ | | |  __/ | | (_| | \__ \
+  \__, |\___|_| |_|\___|_|  \__,_|_|___/
+  |___/
+*/
+
+@import "flex_layout-0.1.less";
+@import "mediaQuery.less";
+@import "components/da_ripassare/typography";
+@import "components/da_ripassare/colors";
+
+
+
+
+
+/*
+                                                   _
+   ___ ___  _ __ ___  _ __   ___  _ __   ___ _ __ | |_ ___
+  / __/ _ \| '_ ` _ \| '_ \ / _ \| '_ \ / _ \ '_ \| __/ __|
+ | (_| (_) | | | | | | |_) | (_) | | | |  __/ | | | |_\__ \
+  \___\___/|_| |_| |_| .__/ \___/|_| |_|\___|_| |_|\__|___/
+                     |_|
+*/
+@import "components/_module.less";
+@import "components/App";
+@import "components/AppController";
+@import "components/AppControllerButton";
+@import "components/icons/Icons"; /* <----------------------da revisionare con nesting delle classi */
+@import "components/AppBody";
+
+@import "components/Grid";
+@import "components/Popup";
+
+@import "components/Item";
+@import "components/SmartScroller";
+
+
+
+
+/*
+
+@import "components/da_ripassare/Button";
+@import "components/da_ripassare/Link";
+@import "components/da_ripassare/ControlButtons";
+@import "components/da_ripassare/MediaObject";
+@import "components/da_ripassare/Tree";
+@import "components/da_ripassare/Table";
+@import "components/da_ripassare/Toggles";
+@import "components/da_ripassare/Badges";
+@import "components/da_ripassare/Card";
+@import "components/da_ripassare/Record";
+
+@import "components/da_ripassare/FormElemets";
+
+@import "components/da_ripassare/RadialMeter";
+
+
+*/
+
+
+/*
+  ____
+ |  _ \  _____   __
+ | | | |/ _ \ \ / /
+ | |_| |  __/\ V /
+ |____/ \___| \_/
+
+*/
+
+
+@import "components/resolutionChecker";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  ____            _   _
+ / ___|  ___  ___| |_(_) ___  _ __  ___
+ \___ \ / _ \/ __| __| |/ _ \| '_ \/ __|
+  ___) |  __/ (__| |_| | (_) | | | \__ \
+ |____/ \___|\___|\__|_|\___/|_| |_|___/
+
+*/
+// standard section colors
+@standard-section-bgColor:    #888;
+@standard-section-color:      @t-color;
+
+// 1st section colors
+@first-section-bgColor:       #9C27B0;
+@first-section-color:         @t-color-white;
+
+// 2nd section colors
+@second-section-bgColor:      #FF9800;
+@second-section-color:        @t-color-white;
+
+// 3rd section colors
+@third-section-bgColor:       #00BCD4;
+@third-section-color:         @t-color-white;
+
+// 4rd section colors
+@forth-section-bgColor:       #E91E63;
+@forth-section-color:         @t-color-white;
+
+
+
+
+
+
+
+
+
+/*
+  ____            _   _                    ____      _
+ / ___|  ___  ___| |_(_) ___  _ __  ___   / ___|___ | | ___  _ __
+ \___ \ / _ \/ __| __| |/ _ \| '_ \/ __| | |   / _ \| |/ _ \| '__|
+  ___) |  __/ (__| |_| | (_) | | | \__ \ | |__| (_) | | (_) | |
+ |____/ \___|\___|\__|_|\___/|_| |_|___/  \____\___/|_|\___/|_|
+
+*/
+
+// standard section color
+.itemHeader{
+  background-color: @standard-section-bgColor;
+}
+
+.linkButton, .itemHeaderBackButton{
+  color: @standard-section-color;
+}
+
+
+
+.firstSection{
+  .sectionColors(@color:@first-section-color; @bgcolor:@first-section-bgColor );
+}
+
+.secondSection{
+  .sectionColors(@color:@second-section-color; @bgcolor:@second-section-bgColor );
+}
+
+.thirdSection{
+  .sectionColors(@color:@third-section-color; @bgcolor:@third-section-bgColor );
+}
+
+.thirdSection{
+  .sectionColors(@color:@third-section-color; @bgcolor:@third-section-bgColor );
+}
+
+
+.forthSection{
+  .sectionColors(@color:@forth-section-color; @bgcolor:@forth-section-bgColor );
+}
+
+
+
+
+
+
+
+
+.sectionColors(@color: black; @bgcolor: #ccc) {
+  .itemHeader{
+    background-color: @bgcolor;
+  }
+
+  .linkButton, .itemHeaderBackButton{
+    color: @color;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

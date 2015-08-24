@@ -1,0 +1,65 @@
+
+
+@appController-width:         130px;
+@appController-height:        60px;
+@appController-bg-color:      #222629;
+
+
+.AppController{
+
+  &._module{
+    .CELL();
+
+    width: @appController-width;
+    @media @onlyScreen and @smallmobile, @mobile  {
+      .ROW();
+      height: @appController-height;
+    }
+
+    >._padder{
+      >._wrapper{
+
+        text-align: center;
+        background-color: @appController-bg-color;
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.8);
+        z-index: 10;
+
+
+        >._frame{
+          .ROWS();
+          @media @onlyScreen and @smallmobile, @mobile  {
+            .COLS();
+          }
+
+          .AppControllerButton{
+            .CELL-FLEX();
+            color: @standard-section-bgColor;
+            .AppControllerButton();
+
+            &:nth-child(1) {
+              color: @first-section-bgColor;
+            }
+
+            &:nth-child(2) {
+              color: @second-section-bgColor;
+            }
+
+            &:nth-child(3) {
+              color: @third-section-bgColor;
+            }
+
+            &:nth-child(4) {
+              color: @forth-section-bgColor;
+            }
+
+            &:hover {
+              background-color: rgba(0,0,0,0.25);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

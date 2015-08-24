@@ -1,0 +1,130 @@
+@checkbox-width: 80px;
+@checkbox-icon-on-color: #fff;
+@check-on-color: #8ce196;
+@checkbox-off-border-color:#ddd;
+@checkbox-effect-duration: 0.3s;
+@checkbox-cursor-margin:4px;
+
+
+
+.Toggles{
+
+  .Toggles-wrapper{
+    display: table;
+
+    .Toggle{
+      display: table-row;
+
+      .Toggle-input{
+        display: table-cell;
+        width: @checkbox-width;
+
+        input[type="checkbox"],
+        input[type="radio"]{
+          position: absolute;
+          margin-left: -9999px;
+          visibility: hidden;
+
+          & + label {
+            display: block;
+            position: relative;
+            cursor: pointer;
+            outline: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-top: 2px;
+            width: @checkbox-width;
+            height: @checkbox-width / 2;
+            background-color: @checkbox-off-border-color;
+            .toggleBorderRadis(@checkbox-width / 2);
+            -webkit-transition: background @checkbox-effect-duration;
+            -moz-transition: background @checkbox-effect-duration;
+            -o-transition: background @checkbox-effect-duration;
+            transition: background @checkbox-effect-duration;
+          }
+
+          & + label:before,
+          & + label:after {
+            display: block;
+            position: absolute;
+            content: "";
+          }
+          & + label:before {
+            top: 2px;
+            left: 2px;
+            bottom: 2px;
+            right: 2px;
+            background-color: #fff;
+            .toggleBorderRadis(@checkbox-width / 2);
+            -webkit-transition: background @checkbox-effect-duration;
+            -moz-transition: background @checkbox-effect-duration;
+            -o-transition: background @checkbox-effect-duration;
+            transition: background @checkbox-effect-duration;
+          }
+          & + label:after {
+            font-family: 'themify';
+            content: "\e64c";
+            color: @checkbox-off-border-color;
+            top: @checkbox-cursor-margin;
+            left: @checkbox-cursor-margin;
+            bottom: @checkbox-cursor-margin;
+            width: ( @checkbox-width / 2 ) - ( @checkbox-cursor-margin * 2 );
+            background-color: #dddddd;
+            text-align: center;
+            line-height: (@checkbox-width / 2) -  8;
+
+            .toggleBorderRadis(( @checkbox-width / 2 ) - ( @checkbox-cursor-margin / 2 ));
+
+            -webkit-transition: margin @checkbox-effect-duration, background @checkbox-effect-duration;
+            -moz-transition: margin @checkbox-effect-duration, background @checkbox-effect-duration;
+            -o-transition: margin @checkbox-effect-duration, background @checkbox-effect-duration;
+            transition: margin @checkbox-effect-duration, background @checkbox-effect-duration;
+          }
+          &:checked + label {
+            background-color: @check-on-color;
+          }
+          &:checked + label:after {
+
+            margin-left: @checkbox-width / 2;
+            background-color: @check-on-color;
+            color: @checkbox-icon-on-color;
+            text-align: center;
+            line-height: (@checkbox-width / 2) -  8;
+          }
+
+          & + label > div{
+            position: absolute;
+            left: 85px;
+            width: 85px;
+          }
+
+        }
+      }
+
+      .Toggle-label{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        padding: 0px 0px 0px 10px;
+        font-size: @font-size-small;
+        font-weight: normal;
+        line-height: @line-height-small;
+        color: @t-color-L3;
+      }
+    }
+  }
+
+}
+
+
+
+
+.toggleBorderRadis (@r) {
+  -webkit-border-radius:@r;
+  -moz-border-radius:@r;
+  -ms-border-radius:@r;
+  -o-border-radius:@r;
+  border-radius:@r;
+}

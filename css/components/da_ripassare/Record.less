@@ -1,0 +1,169 @@
+@record-font-size: @font-size-base;
+@record-value-font-size-increment: 0.1;
+
+@record-font-size-mobile-decrement: 0.15;
+
+@record-row-height:60px;
+@record-mobile-row-height:55px;
+@record-label-separator: ":";
+@label-value-horizontal-gap:10px;
+
+
+
+
+
+.Record {
+  border-bottom: 1px solid #eee;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.01);
+  width: 100%;
+
+  font-size: @record-font-size;
+  @media @onlyScreen and @smallmobile, @mobile {
+    font-size: @record-font-size - @record-font-size-mobile-decrement;
+  }
+
+   .Record-wrapper {
+    display: table;
+    width: 100%;
+    padding: 10px 0px;
+
+    min-height: @record-row-height;
+    border-spacing: 0px;
+    @media @onlyScreen and @smallmobile, @mobile {
+      min-height: @record-mobile-row-height;
+    }
+
+    .Record-Row{
+      display: table-row;
+      .label,
+      .value {
+        display: table-cell;
+        vertical-align: middle;
+        width: 50%;
+      }
+
+      .label {
+        white-space: nowrap;
+        font-weight: normal;
+        text-align: right;
+        text-transform: uppercase;
+        opacity: 0.7;
+        @media @onlyScreen and @smallmobile, @mobile {
+          width: 25%;
+        }
+      }
+
+      .label:after {
+        content: " " @record-label-separator;
+      }
+
+      .value {
+        font-weight: bold;
+        line-height: @line-height-base - 0.1;
+        padding: 0px 6px;
+
+        .complexRecord{
+          background-color: rgba(0,0,0,0.03);
+          box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+          max-width: 100%;
+
+          display: table;
+          border-spacing: 0px;
+          font-weight: normal;
+          padding: 5px 10px;
+          margin: 10px 0px;
+
+
+          .Record-Row{
+            display: table-row;
+            height: @record-row-height / 2;
+
+            .label{
+              white-space: nowrap;
+              vertical-align: top;
+              width: auto !important;
+              float: left;
+            }
+            .value{
+              width: auto !important;
+              vertical-align: top;
+            }
+
+            @media @onlyScreen and @smallmobile, @mobile {
+              .label,
+              .value{
+                display: block;
+                clear: both;
+                padding: 0px;
+              }
+            }
+
+
+
+          }
+
+          & .complexRecord{
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9);
+            margin: -5px -10px !important;
+          }
+        }
+
+
+
+      }
+
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+/*
+  ___                   _          _ _ _                   _
+ | _ \___ __ ___ _ _ __| |  ___ __| (_) |_   _ __  ___  __| |___
+ |   / -_) _/ _ \ '_/ _` | / -_) _` | |  _| | '  \/ _ \/ _` / -_)
+ |_|_\___\__\___/_| \__,_| \___\__,_|_|\__| |_|_|_\___/\__,_\___|
+
+*/
+
+.Record.edit {
+  .Record-wrapper {
+    width: 75%;
+    margin: 0px auto;
+    @media @onlyScreen and @smallmobile, @mobile {
+      width: 100%;
+    }
+
+    .Record-Row{
+      .label {
+        white-space: normal;
+        width: 40%;
+        line-height: @line-height-base - 0.15;
+        font-size: @record-font-size;
+        @media @onlyScreen and @smallmobile, @mobile {
+          width: 30%;
+        }
+        &:after {
+          content: "";
+        }
+      }
+
+      .value {
+        width: 65%;
+        position: relative;
+      }
+    }
+  }
+
+}
+

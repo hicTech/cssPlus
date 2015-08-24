@@ -1,0 +1,328 @@
+/*
+  -------------------------- root container --------------------------
+                            .EXTENDER .EX(alias)
+
+  Provides a container that fits all the available space and lets
+  .ROWS/.COLS to stretch and fill the available height/width
+
+  --------------------------------------------------------------------
+*/
+
+.EXTENDER, .EX {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  /*
+  -------------------------- flex containers --------------------------
+                              .ROWS .COLS
+
+  Define if we want to split the space (the father's space / .EXTENDER) by rows or columns.
+  Establishes the main-axis, thus defining the direction flex items are placed in the flex container
+
+    .COLS
+       - forces its children (.CELL) to be 100% height columns;
+       - horizontal main-axis
+       - vertical cross-axis
+
+    .ROWS
+      - forces its children (.CELL) to be 100% width rows
+      - vertical main-axis
+      - horizontal cross-axis
+
+    .REVERSE [optional]
+      - reverses the order of the children
+
+  --------------------------------------------------------------------
+  */
+  .COLS {
+    .flexContainersCommons();
+    &.REVERSE {
+      .flexDirection(row-reverse);
+    }
+
+>    .CELL{
+      .colsStaticValues();
+    }
+
+  }
+
+  .ROWS {
+    .flexContainersCommons(column, vertical);
+    &.REVERSE {
+      .flexDirection(column-reverse);
+    }
+
+
+>    .CELL{
+      .rowsStaticValues();
+   }
+
+
+
+  }
+
+
+
+  /*
+  -------------------------- main-axis properties --------------------------
+                  .JUS-CENTER .JUS-END .JUS-AROUND .JUS-BETWEEN
+
+  These properties manipulates the main-axis disposition of the children.
+  JUS- stands for justify and they work only if there aren't flex children.
+  In Fact, a flexible child will take all the available space (the space
+  leave free from its siblings) and they would be already justified
+
+    .JUS-CENTER: children will be centered and without margin between them
+
+    .JUS-END: children will be right/bottom aligned and without margin between them
+
+    .JUS-START: (default) children will be left/top aligned and without margin between them
+
+    .JUS-BETWEEN: The space is divided evenly in-between each child, with none of the extra
+                  space placed before the first child or after the last child
+
+    .JUS-AROUND:  same behavior of .JUS-BETWEEN but the margin of the last and the first child
+                  will be half the margin between the various children
+
+
+  --------------------------------------------------------------------
+  */
+
+
+  .flexContainersCommons(@direction:row, @old_safari_legacy:horizontal) {
+    width: 100%;
+    height: 100%;
+    .displayFlex();
+    .flexDirection(@direction, @old_safari_legacy);
+    .justifyContent();
+    .flexAlign();
+
+
+    &.JUS-CENTER {
+      .justifyContent(center, center);
+    }
+
+    &.JUS-END {
+      .justifyContent(flex-end, end);
+    }
+
+    &.JUS-AROUND {
+      /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
+      .justifyContent(space-around, distribute);
+
+    }
+
+    &.JUS-BETWEEN {
+      /* partial support:  FF 22+ */
+      .justifyContent(space-between, justify);
+    }
+
+  /*
+  -------------------------- cross-axis properties --------------------------
+                        .CENTER .END .STRETCH .BASELINE
+
+  These properties manipulates the cross-axis disposition of the children by
+  align-items property. By default is .STRETCH so children fill all the cross-axis
+  available space (height for .COLS and width for .ROWS)
+
+  --------------------------------------------------------------------
+  */
+    &.END {
+      /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+      .flexAlign(flex-end, end);
+    }
+
+    &.CENTER {
+      /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+      .flexAlign(center, center);
+    }
+
+    &.STRETCH {
+      /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+      .flexAlign(stretch, stretch);
+    }
+
+    &.BASELINE {
+      /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+      .flexAlign(baseline, baseline);
+    }
+
+
+    /*-------------------------- browsers abbreviations */
+    .displayFlex {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+    }
+
+    .flexDirection(@direction:row,@old-legacy:horizontal) {
+      -webkit-flex-direction: @direction;
+      -ms-flex-direction: @direction;
+      flex-direction: @direction;
+      -webkit-box-orient: @old-legacy;
+      -moz-box-orient: @old-legacy;
+    }
+
+    .justifyContent(@justify:flex-start, @old-legacy:start) {
+      -webkit-justify-content: @justify;
+      -ms-flex-pack: @old-legacy;
+      justify-content: @justify;
+      -webkit-box-pack: @old-legacy;
+    }
+
+    .flexAlign(@align:stretch, @old-legacy:stretch) {
+      -webkit-align:@align;
+      -ms-flex-align: @align;
+      -webkit-box-align: @align;
+      align-items: @old-legacy;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*
+  --------------- flexible or static items (children) ---------------
+                            .CELL ._FLEX
+
+  These are the children inside a flexible container. We call .CELL cause
+  they can be vertical or horizontal elements depending on their direct father.
+
+  If father is .COLS
+    - main-axis: horizontal, cross-axis: vertical;
+    - .CELL will be 100% height columns and the width depends on their content;
+    - .CELL ._FLEX will be 100% height columns and the width grows to fill all the available (horizontal) space;
+    - .CELL ._150 will be 100% height columns with width 150px;
+    - .CELL ._50pct will be 100% height columns with width 50%.
+
+  If father is .ROWS
+    - main-axis: vertical, cross-axis: horizontal;
+    - .CELL will be 100% width rows and the height depends on their content;
+    - .CELL ._FLEX will be 100% width rows and the height grows to fill all the available (vertical) space;
+    - .CELL ._150 will be 100% width rows with height 150px;
+    - .CELL ._50pct will be 100% width rows with height 50%.
+
+
+  --------------------------------------------------------------------
+  */
+  .CELL{
+    position: relative;
+    overflow: hidden;
+    .noFlex();
+    .selfAlign();
+    .flexOrder();
+
+    &._FLEX{ .flex(1) }
+    &._FLEX1{ .flex(1) }
+    &._FLEX2{ .flex(2) }
+    &._FLEX3{ .flex(3) }
+    &._FLEX4{ .flex(4) }
+    &._FLEX5{ .flex(5) }
+
+
+
+    &._ORD0{ .flexOrder(0) }
+    &._ORD1{ .flexOrder(1) }
+    &._ORD2{ .flexOrder(2) }
+    &._ORD3{ .flexOrder(3) }
+    &._ORD4{ .flexOrder(4) }
+    &._ORD5{ .flexOrder(5) }
+
+
+
+    /*
+  -------------------------- cross-axis properties --------------------------
+                        .CENTER .END .STRETCH .BASELINE
+
+  .CELL are .AUTO by default so inherit father's cross-axis align
+  (by default . STRETCH) so .CELL are .STRETCH by default. With these
+  properties we can set a different align to a specific .CELL
+
+  --------------------------------------------------------------------
+  */
+
+
+    &.AUTO {
+      .selfAlign();
+    }
+
+    &.END {
+      .selfAlign(flex-end, end);
+    }
+
+    &.CENTER {
+      .selfAlign(center, center);
+    }
+
+    &.STRETCH {
+      .selfAlign(stretch, stretch);
+    }
+
+    &.BASELINE {
+      .selfAlign(baseline, baseline);
+    }
+
+
+    .flexOrder(@order:0){
+      -webkit-order: @order;
+      -ms-flex-order: @order;
+      order: @order;
+    }
+
+    .selfAlign(@align:auto, @old-legacy:auto){
+      -webkit-align-self: @align;
+      -ms-flex-item-align: @old-legacy;
+      align-self: @align;
+    }
+
+
+    .noFlex{
+      -webkit-box-ordinal-group: none;
+      -moz-box-ordinal-group: none;
+      -webkit-order: 0;
+      -ms-flex-order: 0;
+      order: 0;
+      -webkit-box-flex: none;
+      -moz-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex:none;
+      flex: none;
+      -webkit-align-self: auto;
+      -ms-flex-item-align: auto;
+      align-self: auto;
+    }
+
+    .flex(@v){
+      /* Old Syntax */
+      -webkit-box-flex: @v;
+      -moz-box-flex: @v;
+      /* New Syntax */
+      -webkit-flex: @v;
+      flex: @v;
+      -ms-flex: @v;
+    }
+
+  }
+
+
+}
+

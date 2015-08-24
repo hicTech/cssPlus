@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS+</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="stylesheet" href="css/cssPlus-v.1.0.0.css">
+
+    <!--
+    <link rel="stylesheet/less" type="text/css" href="css/less2.less">
+    <script src="js/less.js"></script>
+-->
+
+</head>
+<body>
+
+<style>
+
+    /* these classes just to show you all the containers */
+
+    .ROWS, .COLS {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .CELL {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .CELL._FLEX {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+
+    .EXTENDER {
+        background-color: rgba(255, 0, 0, 0.2);
+    }
+
+
+</style>
+
+
+<div class="EXTENDER">
+    <div class="ROWS">
+        <div class="CELL _50px">
+            <div class="EXTENDER">
+                <div class="COLS JUS-BETWEEN">
+                    <div class="CELL _50px">
+                        <div style="height: 49px; background-color: red; border-bottom: solid 1px">50px</div>
+                    </div>
+                    <div class="CELL _50px">
+                        <div style="height: 49px; background-color: red; border-bottom: solid 1px">50px</div>
+                    </div>
+                    <div class="CELL _50px">
+                        <div style="height: 49px; background-color: red; border-bottom: solid 1px">50px</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="CELL _75pct">
+            <div class="EXTENDER">
+                <div class="COLS">
+                    <div class="CELL _100px">
+                        <div class="EXTENDER">
+                            <div class="ROWS JUS-BETWEEN">
+                                <div class="CELL _30px">50</div>
+                                <div class="CELL _30px">50</div>
+                                <div class="CELL _30px">50</div>
+                                <div class="CELL _30px">50</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CELL _FLEX">
+                        <div class="EXTENDER">
+                            <div class="ROWS JUS-CENTER">
+                                <div class="CELL">
+                                    <div style="width: 20px; height: 80px; border: solid 1px"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="CELL _FLEX">
+            <div class="EXTENDER">
+                <div class="COLS">
+                    <div class="CELL _FLEX">
+                        <div class="EXTENDER">
+                            <div class="COLS JUS-CENTER">
+                                <div class="CELL _100px">CENTER</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CELL _FLEX">
+                        <div class="EXTENDER">
+                            <div class="COLS JUS-END">
+                                <div class="CELL _100px">end</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

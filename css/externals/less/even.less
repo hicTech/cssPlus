@@ -1,0 +1,224 @@
+/*!
+ * even.less v0.1.1
+ * github.com/bisrael/even.less/
+ * Copyright (c) 2012, Blake Israel
+ *
+ * This program is free software. It comes without any warranty, to
+ * the extent permitted by applicable law. You can redistribute it
+ * and/or modify it under the terms of the Do What The Fuck You Want
+ * To Public License, Version 2, as published by Sam Hocevar. See
+ * http://sam.zoy.org/wtfpl/COPYING for more details.
+ */
+
+.property(@property, @value, @prefixes: '', @base: true) {
+  -less-property: ~`(function(){var a=@{prefixes}.split(/\s+/),r=' property',i=0;@{base}&&@{prefixes}&&a.push('');for(;i<a.length;++i)b=a[i],r+=';\n  '+(b?'-'+b+'-':b)+'@{property}: '+'@{value}';return r})()`;
+}
+
+// Display
+.dsp(@d) {display:@d;}
+.none() {.dsp(none);}
+.blk() {.dsp(block);}
+.nln() {.dsp(inline);}
+.iblk() {.dsp(inline-block);}
+
+
+// Position
+.pos(@p) {position:@p;}
+.fxd() {.pos(fixed);}
+.stc() {.pos(static);}
+.abs() {.pos(absolute);}
+.rel() {.pos(relative);}
+
+
+// Sides (Left/Right/Top/Bottom)
+.l(@l) {left:@l;}
+.r(@r) {right:@r;}
+.t(@t) {top:@t;}
+.btm(@b) {bottom:@b;}
+.tl(@t,@l) {.t(@t);.l(@l);}
+.tl(@tl) {.tl(@tl,@tl);}
+.tr(@t,@r) {.t(@t);.r(@r);}
+.tr(@tr) {.tr(@tr,@tr);}
+.btmr(@b,@r) {.btm(@b);.r(@r);}
+.btmr(@br) {.btmr(@br,@br);}
+.btml(@b,@l) {.btm(@b);.l(@l);}
+.btml(@bl) {.btml(@bl,@bl);}
+.trbl(@x){.btml(@x);.tr(@x);}
+
+
+// Common Absolute Positioning Shortcut
+.xy(@xy) {.xy(@xy, @xy);}
+.xy(@x, @y) {.abs();.tl(@y, @x);}
+// Size
+.w(@w) {width:@w;}
+.h(@h) {height:@h;}
+.wh(@w,@h) {.w(@w);.h(@h);} .wh(@wh) {.wh(@wh,@wh);} .sqr(@s) {.wh(@s);}
+
+
+// Margins
+.m(@m) {margin: @m;}
+.mt(@m) {margin-top: @m;}
+.mb(@m) {margin-bottom: @m;}
+.ml(@m) {margin-left: @m;}
+.mr(@m) {margin-right: @m;}
+.mtl(@t,@l) {.mt(@t);.ml(@l);} .mtl(@tl) {.mtl(@tl,@tl);}
+.mtr(@t,@r) {.mt(@t);.mr(@r);} .mtr(@tr) {.mtr(@tr,@tr);}
+.mbl(@b,@l) {.mb(@b);.ml(@l);} .mbl(@bl) {.mbl(@bl,@bl);}
+.mbr(@b,@r) {.mb(@b);.mr(@r);} .mbr(@br) {.mbr(@br,@br);}
+.mtb(@t,@b) {.mt(@t);.mb(@b);} .mtb(@tb) {.mtb(@tb,@tb);}
+.mlr(@l,@r) {.ml(@l);.mr(@r);} .mlr(@lr) {.mlr(@lr,@lr);}
+
+
+// Padding
+.p(@p) {padding: @p;}
+.pt(@p) {padding-top: @p;}
+.pb(@p) {padding-bottom: @p;}
+.pl(@p) {padding-left: @p;}
+.pr(@p) {padding-right: @p;}
+.ptl(@t,@l) {.pt(@t);.pl(@l);} .ptl(@tl) {.ptl(@tl,@tl);}
+.ptr(@t,@r) {.pt(@t);.pr(@r);} .ptr(@tr) {.ptr(@tr,@tr);}
+.pbl(@b,@l) {.pb(@b);.pl(@l);} .pbl(@bl) {.pbl(@bl,@bl);}
+.pbr(@b,@r) {.pb(@b);.pr(@r);} .pbr(@br) {.pbr(@br,@br);}
+.ptb(@t,@b) {.pt(@t);.pb(@b);} .ptb(@tb) {.ptb(@tb,@tb);}
+.plr(@l,@r) {.pl(@l);.pr(@r);} .plr(@lr) {.plr(@lr,@lr);}
+
+
+// Border
+.b(@z,@c,@s:solid) {border: @z @s @c;}
+.bt(@z,@c,@s:solid) {border-top: @z @s @c;}
+.bb(@z,@c,@s:solid) {border-bottom: @z @s @c;}
+.bl(@z,@c,@s:solid) {border-left: @z @s @c;}
+.br(@z,@c,@s:solid) {border-right: @z @s @c;}
+.btl(@z,@c,@s:solid) {.bt(@z,@c,@s);.bl(@z,@c,@s);}
+.btr(@z,@c,@s:solid) {.bt(@z,@c,@s);.br(@z,@c,@s);}
+.bbl(@z,@c,@s:solid) {.bb(@z,@c,@s);.bl(@z,@c,@s);}
+.bbr(@z,@c,@s:solid) {.bb(@z,@c,@s);.br(@z,@c,@s);}
+.btb(@z,@c,@s:solid) {.bt(@z,@c,@s);.bb(@z,@c,@s);}
+.blr(@z,@c,@s:solid) {.bl(@z,@c,@s);.br(@z,@c,@s);}
+
+
+// Border Width
+.bw(@w) {border-width:@w;}
+.bwt(@w) {border-top-width:@w;}
+.bwb(@w) {border-bottom-width:@w;}
+.bwl(@w) {border-left-width:@w;}
+.bwr(@w) {border-right-width:@w;}
+.bwtl(@t,@l) {.bwt(@t);.bwl(@l);} .bwtl(@tl) {.bwtl(@tl,@tl);}
+.bwtr(@t,@r) {.bwt(@t);.bwr(@r);} .bwtr(@tr) {.bwtr(@tr,@tr);}
+.bwbl(@b,@l) {.bwb(@b);.bwl(@l);} .bwbl(@bl) {.bwbl(@bl,@bl);}
+.bwbr(@b,@r) {.bwb(@b);.bwr(@r);} .bwbr(@br) {.bwbr(@br,@br);}
+.bwtb(@t,@b) {.bwt(@t);.bwb(@b);} .bwtb(@tb) {.bwtb(@tb,@tb);}
+.bwlr(@l,@r) {.bwl(@l);.bwr(@r);} .bwlr(@lr) {.bwlr(@lr,@lr);}
+
+
+// Border Color
+.bc(@c) {border-color:@c;}
+.bct(@c) {border-top-color:@c;}
+.bcb(@c) {border-bottom-color:@c;}
+.bcl(@c) {border-left-color:@c;}
+.bcr(@c) {border-right-color:@c;}
+.bctl(@t,@l) {.bct(@t);.bcl(@l);} .bctl(@tl) {.bctl(@tl,@tl);}
+.bctr(@t,@r) {.bct(@t);.bcr(@r);} .bctr(@tr) {.bctr(@tr,@tr);}
+.bcbl(@b,@l) {.bcb(@b);.bcl(@l);} .bcbl(@bl) {.bcbl(@bl,@bl);}
+.bcbr(@b,@r) {.bcb(@b);.bcr(@r);} .bcbr(@br) {.bcbr(@br,@br);}
+.bctb(@t,@b) {.bct(@t);.bcb(@b);} .bctb(@tb) {.bctb(@tb,@tb);}
+.bclr(@l,@r) {.bcl(@l);.bcr(@r);} .bclr(@lr) {.bclr(@lr,@lr);}
+
+
+// Border Style
+.bs(@w) {border-style:@w;}
+.bst(@w) {border-top-style:@w;}
+.bsb(@w) {border-bottom-style:@w;}
+.bsl(@w) {border-left-style:@w;}
+.bsr(@w) {border-right-style:@w;}
+.bstl(@t,@l) {.bst(@t);.bsl(@l);} .bstl(@tl) {.bstl(@tl,@tl);}
+.bstr(@t,@r) {.bst(@t);.bsr(@r);} .bstr(@tr) {.bstr(@tr,@tr);}
+.bsbl(@b,@l) {.bsb(@b);.bsl(@l);} .bsbl(@bl) {.bsbl(@bl,@bl);}
+.bsbr(@b,@r) {.bsb(@b);.bsr(@r);} .bsbr(@br) {.bsbr(@br,@br);}
+.bstb(@t,@b) {.bst(@t);.bsb(@b);} .bstb(@tb) {.bstb(@tb,@tb);}
+.bslr(@l,@r) {.bsl(@l);.bsr(@r);} .bslr(@lr) {.bslr(@lr,@lr);}
+
+
+// Border Radius
+.brd(@r) {.property(border-radius,@r,"webkit moz o");}
+.brdtl(@r) {.property(border-top-left-radius,@r,"webkit moz o");}
+.brdtr(@r) {.property(border-top-right-radius,@r,"webkit moz o");}
+.brdbl(@r) {.property(border-bottom-left-radius,@r,"webkit moz o");}
+.brdbr(@r) {.property(border-bottom-right-radius,@r,"webkit moz o");}
+.brdt(@r) {.brdtl(@r);.brdtr(@r);}
+.brdb(@r) {.brdbl(@r);.brdbr(@r);}
+.brdl(@r) {.brdtl(@r);.brdbl(@r);}
+.brdr(@r) {.brdtr(@r);.brdbr(@r);}
+
+
+// Color & Backgrounds
+.c(@c) {color:@c;}
+.bg(@b) {background:@b;}
+.bgc(@c) {background-color:@c;}
+
+
+// Background Image
+.bgi(@i) {background-image:@i;}
+.bgr(@r) {background-repeat:@r;}
+.bgr-no() {.bgr(no-repeat);}
+.bgr-x() {.bgr(repeat-x);}
+.bgr-y() {.bgr(repeat-y);}
+
+
+// Opacity
+.op(@o) {opacity:@o;}
+
+
+// Z-Index
+.z(@z) {z-index:@z;}
+
+
+// Overflow
+.oflw(@v) {overflow:@v;}
+.oflw-h() {.oflw(hidden);}
+
+
+// CSS3 Transitions
+.xtn(@v) {.property(transition,@v,"webkit moz o");}
+.xtn(@t,@fn,@p:all) {.xtn(@p @t @fn);}
+
+
+// CSS3 Transforms
+.xfm(@v) {.property(transform,@v,"webkit moz ms o");}
+.xlt(@x,@y) {.xfm(translate(@x @y));}
+.scl(@s) {.xfm(scale(@s));}
+.rot(@a) {.xfm(rotate(@a));}
+.skw(@x,@y) {.xfm(skew(@x,@y));}
+.rot-scl(@r,@s) {.xfm(rotate(@r) scale(@s));}
+.rot-skw(@r,@x,@y) {.xfm(rotate(@r) skew(@x,@y));}
+.rot-xlt(@r,@x,@y) {.xfm(rotate(@r) translate(@x,@y));}
+.scl-skw(@s,@x,@y) {.xfm(scale(@s) skew(@x,@y));}
+.scl-xlt(@s,@x,@y) {.xfm(scale(@s) translate(@x,@y));}
+.mtrx(@a,@b,@c,@d,@e,@f) {.xfm(matrix(@a,@b,@c,@d,@e,@f));}
+
+
+// Transform Origin
+.orgn(@x,@y) {.property(transform-origin,@x @y,"webkit moz ms o");} .orgn(@o) {.orgn(@o,@o);}
+
+
+// Turn off user-selection
+.noselect() {
+  -webkit-touch-callout: none;
+  .property(user-select,none,"webkit khtml moz ms o");
+}
+
+
+// Clip the Background to the padding box
+.bg2pad() {
+  .property(background-clip, padding-box, "webkit o");
+  -moz-background-clip: padding;
+}
+
+
+// Fun Utilities
+// Make a <div> into an arrow using borders!
+.arrw(@h,@w,@c) {
+  .wh(0);.mtl(-@h/2, -@w/2);
+  .b(0, transparent);.bcb(@c);
+  .bw(0 @w/2 @h);
+}

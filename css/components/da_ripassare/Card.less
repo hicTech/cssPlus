@@ -1,0 +1,252 @@
+
+.Card {
+  width:90%;
+  height:80px;
+  background:#fff;
+  margin:40px auto;
+  position:relative;
+  -webkit-box-shadow: 0 7px 6px -6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0 7px 6px -6px rgba(0,0,0,0.1);
+  box-shadow: 0 7px 6px -6px rgba(0,0,0,0.1);
+  font-size: @font-size-small;
+
+  .Card-triangleBadge{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 70px 70px;
+    border-color: transparent transparent @second-section-bgColor transparent;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 20;
+
+    .Icon{
+      color: white;
+      font-size: 27px;
+      bottom: -65px;
+      position: absolute;
+      right: 6px;
+    }
+  }
+
+
+
+  .Card-contents-wrapper{
+    .EXTENDER();
+    z-index: 10;
+
+    .Card-header{
+      .CELL();
+      .COLS();
+      height: 75px;
+      box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.05);
+
+
+      .Card-header-title{
+        margin: 13px 0px 0px 15px;
+        font-size: @font-size-base + 1;
+      }
+      .Card-header-subtitle{
+        margin: 5px 0px 0px 15px;
+
+      }
+    }
+  }
+
+}
+
+
+.Card.InsideShadow{
+  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+
+
+
+.Card.flat,
+.Card.flat:before,
+.Card.flat:after{
+    -webkit-box-shadow:none;
+    -moz-box-shadow: none;
+    box-shadow:none;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+
+/*==================================================
+ * CardShadowEffect1
+ * ===============================================*/
+
+.CardShadowEffect1:before,
+.CardShadowEffect1:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.CardShadowEffect1:after{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * CardShadowEffect2
+ * ===============================================*/
+
+.CardShadowEffect2:before{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+
+/*==================================================
+ * CardShadowEffect3
+ * ===============================================*/
+
+.CardShadowEffect3:after{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  right: 10px;
+  left: auto;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  box-shadow: 0 15px 10px rgba(0,0,0,0.9);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+
+/*==================================================
+ * CardShadowEffect4
+ * ===============================================*/
+
+.CardShadowEffect4:before, .CardShadowEffect4:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  top:50%;
+  bottom:0;
+  left:10px;
+  right:10px;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.CardShadowEffect4:after{
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * CardShadowEffect5
+ * ===============================================*/
+
+.CardShadowEffect5:before, .CardShadowEffect5:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  top:0;
+  bottom:0;
+  left:10px;
+  right:10px;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.CardShadowEffect5:after{
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * CardShadowEffect6
+ * ===============================================*/
+
+.CardShadowEffect6:before, .CardShadowEffect6:after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  -webkit-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  -moz-box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  top:10px;
+  bottom:10px;
+  left:0;
+  right:0;
+  -moz-border-radius:100px / 10px;
+  border-radius:100px / 10px;
+}
+.CardShadowEffect6:after{
+  right:10px;
+  left:auto;
+  -webkit-transform:skew(8deg) rotate(3deg);
+  -moz-transform:skew(8deg) rotate(3deg);
+  -ms-transform:skew(8deg) rotate(3deg);
+  -o-transform:skew(8deg) rotate(3deg);
+  transform:skew(8deg) rotate(3deg);
+}
+
+
+

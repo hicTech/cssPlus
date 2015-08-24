@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>cssPlus</title>
+
+
+    <link rel="stylesheet/less" href="../css/less.less">
+
+
+    <!-- js -->
+    <script type="text/javascript" src="../js/less.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+</head>
+<body>
+
+<style>
+
+    /* these classes just to show you all the containers */
+
+    .COL, .ROW, .ROW-FLEX, .COL-FLEX {
+        box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .CELL, .CELL-FLEX, .CELL-FLEX {
+        box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+
+<div class="EXTENDER">
+    <div class="PADDER25">
+        <div class="COLS">
+            <div class="CELL" style="width: 50px"></div>
+            <div class="CELL-FLEX">
+                <div class="EXTENDER">
+                    <div class="ROWS">
+                        <div class="CELL-FLEX"></div>
+                        <div class="CELL-FLEX"></div>
+                        <div class="CELL" style="height: 250px">
+
+                                <div class="EXTENDER">
+                                    <div class="COLS">
+                                        <div class="CELL" style="width: 30px"></div>
+                                        <div class="CELL-FLEX"></div>
+                                        <div class="CELL" style="width: 300px">
+
+                                            <div class="EXTENDER">
+                                                <div class="ROWS">
+                                                    <div class="CELL" style="height: 50px"></div>
+                                                    <div class="CELL-FLEX"></div>
+                                                    <div class="CELL" style="height: 50px"></div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="CELL-FLEX"></div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

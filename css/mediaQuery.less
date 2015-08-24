@@ -1,0 +1,166 @@
+/* screens range */
+
+
+@screen-s-max:    20em;         /* 320px  */
+@screen-min:      20.063em;     /* 321px  */
+@screen-max:      40em;         /* 640px  */
+@screen-m-min:    40.063em;     /* 641px  */
+@screen-m-max:    64em;         /* 1024px  */
+@screen-l-min:    64.063em;     /* 1025px  */
+@screen-l-max:    90em;         /* 1440px  */
+@screen-xl-min:   90.063em;     /* 1441px  */
+@screen-xl-max:   120em;        /* 1920px  */
+@screen-xxl-min:  120.063em;    /*  1921px  */
+
+/*
+ 0----- smallmobile -----320-----  mobile  -----640-----  tablet  -----1024-----  notebook  -----1440----- desktop -----1920----- wide
+*/
+
+@onlyScreen: ~"only screen";
+
+@smallmobile: ~"(max-width: @{screen-s-max})";
+@mobile: ~"(min-width: @{screen-s-max}) and (max-width: @{screen-max})";
+@tablet: ~"(min-width: @{screen-m-min}) and (max-width: @{screen-m-max})";
+@notebook: ~"(min-width: @{screen-l-min}) and (max-width: @{screen-l-max})";
+@desktop: ~"(min-width: @{screen-xl-min}) and (max-width: @{screen-xl-max})";
+@wide: ~"(min-width: @{screen-xxl-min})";
+
+@portrait: ~"(orientation:portrait)";
+@landscape: ~"(orientation:landscape)";
+
+@mobile-and-more: ~"(min-width: @{screen-min})";
+@tablet-and-more: ~"(min-width: @{screen-m-min})";
+@notebook-and-more: ~"(min-width: @{screen-l-min})";
+@desktop-and-more: ~"(min-width: @{screen-xl-min})";
+
+
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+
+
+
+/*
+
+syntax example
+
+@media @onlyScreen and @tablet and @portrait , @notebook and @landscape, @mobile and @landscape{
+  body{
+    opacity: 0.8;
+  }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*
+  mediaquery classes utility
+*/
+
+
+@media @onlyScreen and @smallmobile{
+  .only-smallmobile{
+    display: block;
+  }
+  .hide-smallmobile{
+    display: none;
+  }
+  .hide-mobile, .hide-tablet, .hide-notebook, .hide-desktop, .hide-wide{
+    display: block;
+  }
+  .only-notebook{
+    display: none;
+  }
+}
+
+@media @onlyScreen and @mobile{
+  .only-mobile{
+    display: block;
+  }
+  .hide-mobile{
+    display: none;
+  }
+  .hide-smallmobile, .hide-tablet, .hide-notebook, .hide-desktop, .hide-wide{
+    display: block;
+  }
+  .only-notebook{
+    display: none;
+  }
+}
+
+
+@media @onlyScreen and @tablet{
+  .only-tablet{
+    display: block;
+  }
+  .hide-tablet{
+    display: none;
+  }
+  .hide-mobile, .hide-smallmobile, .hide-notebook, .hide-desktop, .hide-wide{
+    display: block;
+  }
+  .only-notebook{
+    display: none;
+  }
+}
+
+/* default */
+@media @onlyScreen and @notebook{
+  .only-notebook{
+    display: block;
+  }
+  .hide-notebook{
+    display: none;
+  }
+  .hide-mobile, .hide-tablet, .hide-smallmobile, .hide-desktop, .hide-wide{
+    display: block;
+  }
+}
+
+
+@media @onlyScreen and @desktop{
+  .only-desktop{
+    display: block;
+  }
+  .only-notebook{
+    display: none;
+  }
+  .hide-desktop{
+    display: none;
+  }
+  .hide-mobile, .hide-tablet, .hide-notebook, .hide-smallmobile, .hide-wide{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @wide{
+  .only-wide{
+    display: block;
+  }
+  .only-notebook{
+    display: none;
+  }
+  .hide-wide{
+    display: none;
+  }
+  .hide-mobile, .hide-tablet, .hide-notebook, .hide-desktop, .hide-smallmobile{
+    display: block;
+  }
+}
+
+
+
+
+
+
+
