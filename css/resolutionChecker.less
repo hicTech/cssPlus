@@ -1,0 +1,51 @@
+body:after {
+  position: fixed;
+  z-index: 99999999999;
+  bottom: 15px;
+  left: 15px;
+  font-size: 11px;
+  color: red;
+
+
+  @media @onlyScreen and @smallmobile {
+    content: "Smallmob";
+  }
+
+  @media @onlyScreen and @mobile {
+    content: "Mobile";
+  }
+
+  @media @onlyScreen and @tablet {
+    content: "Tablet";
+  }
+
+  @media @onlyScreen and @notebook {
+    content: "Notebook";
+  }
+
+  @media @onlyScreen and @desktop {
+    content: "Desktop";
+  }
+
+  @media @onlyScreen and @wide {
+    content: "Wide";
+  }
+}
+
+body:before {
+  position: fixed;
+  z-index: 99999999999;
+  bottom: 5px;
+  left: 15px;
+  font-size: 11px;
+  color: rgba(255,0,0,0.65);
+
+  @media @portrait {
+    content: "portrait";
+  }
+
+  @media @landscape {
+    content: "landscape";
+  }
+}
+

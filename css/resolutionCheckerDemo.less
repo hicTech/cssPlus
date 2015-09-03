@@ -1,0 +1,63 @@
+
+
+
+.smallmobile_container,
+.mobile_container,
+.tablet_container,
+.notebook_container,
+.desktop_container,
+.wide_container,
+.la, .po{
+  display: none;
+}
+
+
+
+@media @onlyScreen and @smallmobile {
+  .smallmobile_container{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @mobile {
+  .mobile_container{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @tablet {
+  .tablet_container{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @notebook {
+  .notebook_container{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @desktop {
+  .desktop_container{
+    display: block;
+  }
+}
+
+@media @onlyScreen and @wide {
+  .wide_container{
+    display: block;
+  }
+}
+
+
+@media @portrait {
+  .po{
+    display: block;
+  }
+}
+
+@media @landscape {
+  .la{
+    display: block;
+  }
+}

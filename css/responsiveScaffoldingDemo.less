@@ -1,0 +1,105 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+.r-app{
+  .cols();
+
+
+  .uno{
+    .cell();
+    background-color: green;
+    ._pct(25);
+  }
+
+  @media @onlyScreen and @portrait {
+    .rows();
+
+    .uno{
+      .cell();
+      background-color: red;
+      ._px(100);
+    }
+  }
+
+
+
+  .due{
+    .cell();
+    background-color: fuchsia;
+    .flex();
+  }
+
+
+  .test{
+    .rows();
+    .aa{
+      .cell();
+      .flex();
+    }
+
+    .bb{
+      .cell();
+      ._px(55);
+      background-color: hotpink
+    }
+
+
+    @media @onlyScreen and @portrait {
+      .cols();
+
+      .bb{
+        .cell();
+        ._pct(50);
+        background-color: navajowhite;
+      }
+    }
+
+
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* app sidebar and app body */
+.app-sidebar{
+  background-color: #333;
+}
+
+/* sidebar buttons */
+.sidebar-button{
+  text-align: center;
+  color: rgba(255,255,255,0.75);
+  padding: 25px 0px;
+  border-bottom: solid 1px #444;
+}
+
+.sidebar-button:hover{
+  cursor: pointer;
+  background-color: #3a3a3a;
+}
+
+
+
+.sidebar-button i{
+  font-size: 1.75em;
+  clear: both;
+  margin-bottom: 12px;
+}
+
+.sidebar-button div{
+  color: white;
+  font-size: 0.85em;
+}
