@@ -3,7 +3,6 @@ body{
 
 }
 
-
 .r-app{
   .cols();
 
@@ -11,7 +10,7 @@ body{
   .uno{
     .cell();
     background-color: green;
-    ._pct(25);
+    ._pct(10);
   }
 
   @media @onlyScreen and @portrait {
@@ -20,7 +19,7 @@ body{
     .uno{
       .cell();
       background-color: red;
-      ._px(100);
+      ._px(50);
     }
   }
 
@@ -29,20 +28,20 @@ body{
   .due{
     .cell();
     background-color: fuchsia;
-    .flex();
+    ._flex();
   }
 
 
   .test{
     .rows();
-    .aa{
-      .cell();
-      .flex();
-    }
-
     .bb{
       .cell();
-      ._px(55);
+      ._flex();
+    }
+
+    .aa{
+      .cell();
+      ._px(200);
       background-color: hotpink
     }
 
@@ -50,10 +49,11 @@ body{
     @media @onlyScreen and @portrait {
       .cols();
 
-      .bb{
+
+      .aa{
         .cell();
-        ._pct(50);
-        background-color: navajowhite;
+        ._px(100);
+        background-color: hotpink
       }
     }
 
