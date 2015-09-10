@@ -44,20 +44,33 @@ Establishes the main-axis, thus defining the direction flex items are placed in 
 
 --------------------------------------------------------------------
 */
-.COLS {
+.COLS{
   .flexContainersCommons();
-  &.REVERSE {
-    .flexDirection(row-reverse);
-  }
 }
 
-.ROWS {
+.COLS.REVERSE{
+  .flexDirection(row-reverse);
+}
+
+
+
+.ROWS{
   .flexContainersCommons(column, vertical);
-  &.REVERSE {
-    .flexDirection(column-reverse);
-  }
 }
 
+.ROWS.REVERSE{
+  .flexDirection(column-reverse);
+}
+
+
+.flexContainersCommons(@direction:row, @old_safari_legacy:horizontal) {
+  width: 100%;
+  height: 100%;
+  .displayFlex();
+  .flexDirection(@direction, @old_safari_legacy);
+  .justifyContent();
+  .flexAlign();
+}
 
 
 /*
@@ -84,35 +97,28 @@ leave free from its siblings) and they would be already justified
 
 --------------------------------------------------------------------
 */
+.ROWS.JUS-CENTER,
+.COLS.JUS-CENTER{
+  .justifyContent(center, center);
+}
 
+.ROWS.JUS-END,
+.COLS.JUS-END{
+  .justifyContent(flex-end, end);
+}
 
-.flexContainersCommons(@direction:row, @old_safari_legacy:horizontal) {
-  width: 100%;
-  height: 100%;
-  .displayFlex();
-  .flexDirection(@direction, @old_safari_legacy);
-  .justifyContent();
-  .flexAlign();
+.ROWS.JUS-AROUND,
+.COLS.JUS-AROUND{
+  /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
+  .justifyContent(space-around, distribute);
 
+}
 
-  &.JUS-CENTER {
-    .justifyContent(center, center);
-  }
-
-  &.JUS-END {
-    .justifyContent(flex-end, end);
-  }
-
-  &.JUS-AROUND {
-    /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
-    .justifyContent(space-around, distribute);
-
-  }
-
-  &.JUS-BETWEEN {
-    /* partial support:  FF 22+ */
-    .justifyContent(space-between, justify);
-  }
+.ROWS.JUS-BETWEEN
+.COLS.JUS-BETWEEN,{
+  /* partial support:  FF 22+ */
+  .justifyContent(space-between, justify);
+}
 
 /*
 -------------------------- cross-axis properties --------------------------
@@ -124,64 +130,64 @@ available space (height for .COLS and width for .ROWS)
 
 --------------------------------------------------------------------
 */
-  &.END {
-    /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
-    .flexAlign(flex-end, end);
-  }
+.ROWS.END,
+.COLS.END{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign(flex-end, end);
+}
 
-  &.CENTER {
-    /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
-    -webkit-box-align:center;
-    -webkit-align-items:center;
-    -ms-flex-align:center;
-    align-items:center
-  }
+.ROWS.CENTER,
+.COLS.CENTER{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center
+}
 
-  &.STRETCH {
-    /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
-    .flexAlign(stretch, stretch);
-  }
+.ROWS.STRETCH,
+.COLS.STRETCH{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign(stretch, stretch);
+}
 
-  &.BASELINE {
-    /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
-    .flexAlign(baseline, baseline);
-  }
-
-
-  /*-------------------------- browsers abbreviations */
-  .displayFlex {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-  }
-
-  .flexDirection(@direction:row,@old-legacy:horizontal) {
-    -webkit-flex-direction: @direction;
-    -ms-flex-direction: @direction;
-    flex-direction: @direction;
-    -webkit-box-orient: @old-legacy;
-    -moz-box-orient: @old-legacy;
-  }
-
-  .justifyContent(@justify:flex-start, @old-legacy:start) {
-    -webkit-justify-content: @justify;
-    -ms-flex-pack: @old-legacy;
-    justify-content: @justify;
-    -webkit-box-pack: @old-legacy;
-  }
-
-  .flexAlign(@align:stretch, @old-legacy:stretch) {
-    -webkit-align:@align;
-    -ms-flex-align: @align;
-    -webkit-box-align: @align;
-    align-items: @old-legacy;
-  }
-
+.ROWS.BASELINE,
+.COLS.BASELINE{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign(baseline, baseline);
 }
 
 
+/*-------------------------- browsers abbreviations */
+.displayFlex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexDirection(@direction:row,@old-legacy:horizontal) {
+  -webkit-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+  -webkit-box-orient: @old-legacy;
+  -moz-box-orient: @old-legacy;
+}
+
+.justifyContent(@justify:flex-start, @old-legacy:start) {
+  -webkit-justify-content: @justify;
+  -ms-flex-pack: @old-legacy;
+  justify-content: @justify;
+  -webkit-box-pack: @old-legacy;
+}
+
+.flexAlign(@align:stretch, @old-legacy:stretch) {
+  -webkit-align:@align;
+  -ms-flex-align: @align;
+  -webkit-box-align: @align;
+  align-items: @old-legacy;
+}
 
 
 
@@ -223,28 +229,29 @@ If father is .ROWS
   .noFlex();
   .selfAlign();
   .flexOrder();
+}
 
-  &._FLEX{ .flex(1) }
-  &._FLEX1{ .flex(1) }
-  &._FLEX2{ .flex(2) }
-  &._FLEX3{ .flex(3) }
-  &._FLEX4{ .flex(4) }
-  &._FLEX5{ .flex(5) }
-
-
-
-  &._ORD0{ .flexOrder(0) }
-  &._ORD1{ .flexOrder(1) }
-  &._ORD2{ .flexOrder(2) }
-  &._ORD3{ .flexOrder(3) }
-  &._ORD4{ .flexOrder(4) }
-  &._ORD5{ .flexOrder(5) }
+.CELL._FLEX{ .flex(1) }
+.CELL._FLEX1{ .flex(1) }
+.CELL._FLEX2{ .flex(2) }
+.CELL._FLEX3{ .flex(3) }
+.CELL._FLEX4{ .flex(4) }
+.CELL._FLEX5{ .flex(5) }
 
 
 
-  /*
+.CELL._ORD0{ .flexOrder(0) }
+.CELL._ORD1{ .flexOrder(1) }
+.CELL._ORD2{ .flexOrder(2) }
+.CELL._ORD3{ .flexOrder(3) }
+.CELL._ORD4{ .flexOrder(4) }
+.CELL._ORD5{ .flexOrder(5) }
+
+
+
+/*
 -------------------------- cross-axis properties --------------------------
-                      .CENTER .END .STRETCH .BASELINE
+                    .CENTER .END .STRETCH .BASELINE
 
 .CELL are .AUTO by default so inherit father's cross-axis align
 (by default . STRETCH) so .CELL are .STRETCH by default. With these
@@ -254,67 +261,79 @@ properties we can set a different align to a specific .CELL
 */
 
 
-  &.AUTO {
-    .selfAlign();
-  }
-
-  &.END {
-    .selfAlign(flex-end, end);
-  }
-
-  &.CENTER {
-    .selfAlign(center, center);
-  }
-
-  &.STRETCH {
-    .selfAlign(stretch, stretch);
-  }
-
-  &.BASELINE {
-    .selfAlign(baseline, baseline);
-  }
-
-
-  .flexOrder(@order:0){
-    -webkit-order: @order;
-    -ms-flex-order: @order;
-    order: @order;
-  }
-
-  .selfAlign(@align:auto, @old-legacy:auto){
-    -webkit-align-self: @align;
-    -ms-flex-item-align: @old-legacy;
-    align-self: @align;
-  }
-
-
-  .noFlex{
-    -webkit-box-ordinal-group: none;
-    -moz-box-ordinal-group: none;
-    -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-box-flex: none;
-    -moz-box-flex: none;
-    -webkit-flex: none;
-    -ms-flex:none;
-    flex: none;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-  }
-
-  .flex(@v){
-    /* Old Syntax */
-    -webkit-box-flex: @v;
-    -moz-box-flex: @v;
-    /* New Syntax */
-    -webkit-flex: @v;
-    flex: @v;
-    -ms-flex: @v;
-  }
-
+.CELL.AUTO {
+  .selfAlign();
 }
+
+.CELL.END {
+  .selfAlign(flex-end, end);
+}
+
+.CELL.CENTER {
+  .selfAlign(center, center);
+}
+
+.CELL.STRETCH {
+  .selfAlign(stretch, stretch);
+}
+
+.CELL.BASELINE {
+  .selfAlign(baseline, baseline);
+}
+
+
+.flexOrder(@order:0){
+  -webkit-order: @order;
+  -ms-flex-order: @order;
+  order: @order;
+}
+
+.selfAlign(@align:auto, @old-legacy:auto){
+  -webkit-align-self: @align;
+  -ms-flex-item-align: @old-legacy;
+  align-self: @align;
+}
+
+
+.noFlex{
+  -webkit-box-ordinal-group: none;
+  -moz-box-ordinal-group: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex:none;
+  flex: none;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.flex(@v){
+  /* Old Syntax */
+  -webkit-box-flex: @v;
+  -moz-box-flex: @v;
+  /* New Syntax */
+  -webkit-flex: @v;
+  flex: @v;
+  -ms-flex: @v;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .PADDER-CENTER {
