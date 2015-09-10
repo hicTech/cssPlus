@@ -1,49 +1,31 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
 
-}
-
-.colonne {
+.r-app {
   .cols();
 
-
-
-.aa {
-  .cell();
-  ._px(333);
-  background-color: palevioletred;
-}
-
-
-.bb {
-  ._flex();
-}
-
-.cc {
-  .cell();
-  ._px(111);
-  background-color: blue;
-}
-
-@media @onlyScreen and @tablet{
-  .rows();
-
-  .aa {
+  .app-controller {
     .cell();
-    ._px(333);
-    background-color: palevioletred;
+    width: 200px;
+
+
+    background-color: peru;
   }
 
-  .bb {
-    ._flex();
+  @media @onlyScreen and @mobile {
+    .rows();
+
+    .app-controller {
+      .cell();
+      height: 20px;
+
+      background-color: yellowgreen;
+    }
+
   }
 
-  .cc {
-    .cell();
-    ._px(111);
-    background-color: blue;
+
+
+  .mask(@v){
+    width: ~"@{v}px" !important;
+    height: ~"@{v}px" !important;
   }
-}
-
-
 }
