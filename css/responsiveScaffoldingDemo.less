@@ -3,11 +3,18 @@
   .cols();
 
   .app-controller {
-    .cell();
-    width: 200px;
-
-
+    .cell(20%);
     background-color: peru;
+  }
+
+  .app-body{
+    .cell(flex);
+  }
+
+  .app-footer {
+    .cell(100px);
+    background-color: black;
+    color: white;
   }
 
   @media @onlyScreen and @mobile {
@@ -15,17 +22,29 @@
 
     .app-controller {
       .cell();
-      height: 20px;
-
       background-color: yellowgreen;
+    }
+
+    .app-footer {
+      .cell(33px);
+      background-color: black;
+      color: white;
     }
 
   }
 
+  .estendibile{
+    .extender();
 
+    .imbottitura{
+      .padder(45px)
+    }
 
-  .mask(@v){
-    width: ~"@{v}px" !important;
-    height: ~"@{v}px" !important;
+    @media @onlyScreen and @mobile {
+      .imbottitura{
+        .padder(5px)
+      }
+    }
   }
+
 }
