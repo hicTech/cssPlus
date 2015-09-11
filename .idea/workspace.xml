@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21453050-4d63-4b15-b0e6-e9a39c481f40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" afterPath="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" afterPath="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/scaffoldingValues.less" afterPath="$PROJECT_DIR$/css/scaffoldingValues.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cssPlus.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,11 +76,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="scaffoldingValues.less" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="scaffoldingValues.less" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/scaffoldingValues.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7644991" vertical-offset="810" max-vertical-offset="13470">
-                  <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.3427065" vertical-offset="0" max-vertical-offset="13470">
+                  <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -113,7 +110,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="responsiveScaffoldingDemo.less" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="responsiveScaffoldingDemo.less" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/responsiveScaffoldingDemo.less">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.24271844" vertical-offset="0" max-vertical-offset="840">
@@ -188,8 +185,8 @@
         <option value="$PROJECT_DIR$/css/icons/icons.less" />
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/resolutionChecker.html" />
-        <option value="$PROJECT_DIR$/css/scaffoldingValues.less" />
         <option value="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" />
+        <option value="$PROJECT_DIR$/css/scaffoldingValues.less" />
       </list>
     </option>
   </component>
@@ -839,18 +836,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/scaffoldingValues.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7644991" vertical-offset="810" max-vertical-offset="13470">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/responsiveScaffoldingDemo.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24271844" vertical-offset="0" max-vertical-offset="840">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/scaffoldingValues.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3427065" vertical-offset="0" max-vertical-offset="13470">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding />
         </state>
       </provider>
