@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="21453050-4d63-4b15-b0e6-e9a39c481f40" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" afterPath="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/flex_layout-0.2.less" afterPath="$PROJECT_DIR$/css/flex_layout-0.2.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/icons/icons.less" afterPath="$PROJECT_DIR$/css/icons/icons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/responsiveScaffolding.html" afterPath="$PROJECT_DIR$/responsiveScaffolding.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" afterPath="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/scaffoldingValues.less" afterPath="$PROJECT_DIR$/css/scaffoldingValues.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -49,7 +45,7 @@
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.0" vertical-offset="420" max-vertical-offset="750">
+                <state vertical-scroll-proportion="-17.166666" vertical-offset="8" max-vertical-offset="750">
                   <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
                   <folding />
                 </state>
@@ -59,7 +55,7 @@
           <file leaf-file-name="demo.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/demo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.25" vertical-offset="510" max-vertical-offset="1335">
+                <state vertical-scroll-proportion="-6.875" vertical-offset="375" max-vertical-offset="1335">
                   <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -83,11 +79,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="scaffoldingValues.less" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="scaffoldingValues.less" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/scaffoldingValues.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31634447" vertical-offset="0" max-vertical-offset="7845">
-                  <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.7644991" vertical-offset="810" max-vertical-offset="13470">
+                  <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="resolutionChecker.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/resolutionChecker.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-5.625" vertical-offset="1440" max-vertical-offset="2790">
+                  <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="resolutionChecker.less" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/resolutionChecker.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-20.083334" vertical-offset="283" max-vertical-offset="855">
+                  <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -97,11 +113,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="responsiveScaffoldingDemo.less" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="responsiveScaffoldingDemo.less" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/responsiveScaffoldingDemo.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.46116504" vertical-offset="0" max-vertical-offset="840">
-                  <caret line="19" column="32" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="32" />
+                <state vertical-scroll-proportion="0.24271844" vertical-offset="0" max-vertical-offset="840">
+                  <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
@@ -158,7 +174,6 @@
         <option value="$PROJECT_DIR$/css/resolutionChecker.less" />
         <option value="$PROJECT_DIR$/css/resolutionChecker.Demoless" />
         <option value="$PROJECT_DIR$/css/resolutionCheckerDemo.less" />
-        <option value="$PROJECT_DIR$/resolutionChecker.html" />
         <option value="$PROJECT_DIR$/css/staticValues-backup.less" />
         <option value="$PROJECT_DIR$/scaffolding.html" />
         <option value="$PROJECT_DIR$/css/staticValues.less" />
@@ -168,12 +183,13 @@
         <option value="$PROJECT_DIR$/super.html" />
         <option value="$PROJECT_DIR$/css/less.less" />
         <option value="$PROJECT_DIR$/responsiveScaffolding.html" />
-        <option value="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" />
         <option value="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" />
-        <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/css/flex_layout-0.2.less" />
         <option value="$PROJECT_DIR$/css/icons/icons.less" />
+        <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/resolutionChecker.html" />
         <option value="$PROJECT_DIR$/css/scaffoldingValues.less" />
+        <option value="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" />
       </list>
     </option>
   </component>
@@ -421,7 +437,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19277108" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19277108" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -710,20 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resolutionChecker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9291339" vertical-offset="0" max-vertical-offset="2790">
-          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/resolutionChecker.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9870968" vertical-offset="0" max-vertical-offset="855">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/scaffoldingValues-backup.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3539326" vertical-offset="1251" max-vertical-offset="1785">
@@ -752,14 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13111888" vertical-offset="0" max-vertical-offset="572">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="750">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -796,9 +790,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/responsiveScaffolding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.25" vertical-offset="135" max-vertical-offset="780">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/resolutionChecker.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.083334" vertical-offset="283" max-vertical-offset="855">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.166666" vertical-offset="8" max-vertical-offset="750">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="510" max-vertical-offset="1335">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="375" max-vertical-offset="1335">
           <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -811,28 +831,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/responsiveScaffolding.html">
+    <entry file="file://$PROJECT_DIR$/resolutionChecker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.25" vertical-offset="135" max-vertical-offset="780">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/responsiveScaffoldingDemo.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46116504" vertical-offset="0" max-vertical-offset="840">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="32" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="1440" max-vertical-offset="2790">
+          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/scaffoldingValues.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31634447" vertical-offset="0" max-vertical-offset="7845">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7644991" vertical-offset="810" max-vertical-offset="13470">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/responsiveScaffoldingDemo.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24271844" vertical-offset="0" max-vertical-offset="840">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
