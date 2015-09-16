@@ -1,0 +1,76 @@
+
+/*
+
+-------------------
+CSS:
+-------------------
+
+.container{
+  .rows();
+
+  .1st_element{
+    .cell(40%);
+  }
+
+  .2nd_element{
+    ._flex()
+  }
+
+  @media @onlyScreen and @mobile{
+    .cols();
+
+    .1st_element{
+      .cell(25%);
+    }
+  }
+
+}
+
+*/
+
+
+.rows {
+  .flexContainersCommons(column, vertical);
+
+  ._flex{
+    .CELL();
+    .CELL._FLEX();
+  }
+
+  .cell(@v:auto) {
+    .CELL();
+    width: 100% !important;
+    height: @v !important;
+  }
+}
+
+
+.cols {
+  .flexContainersCommons();
+
+  ._flex{
+    .CELL();
+    .CELL._FLEX();
+  }
+
+  .cell(@v:auto) {
+    .CELL();
+    height: 100% !important;
+    width: @v !important;
+  }
+
+}
+
+
+
+.extender {
+  .EXTENDER();
+}
+
+.padder(@v) {
+  position: absolute;
+  top: @v;
+  left: @v;
+  bottom: @v;
+  right: @v;
+}

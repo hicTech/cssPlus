@@ -1,0 +1,132 @@
+body{
+  font-family: Helvetica Neue, Helvetica, Arial;
+}
+
+
+/* app */
+
+.app {
+  .cols();
+
+  .app-controller {
+    .cell(170px);
+    background-color: #333;
+
+  }
+
+  .app-body {
+    ._flex();
+  }
+
+  @media @onlyScreen and @portrait {
+    .rows();
+
+    .app-controller {
+
+      .cell(70px);
+    }
+
+    .app-body{
+
+    }
+  }
+
+}
+
+
+
+
+
+
+/* controller buttons */
+
+.controller-buttons {
+  .rows();
+  color: white;
+  text-align: center;
+
+  .controller-button {
+    .cell(55px);
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+
+    .button-icon{
+      font-size: 1.5em;
+    }
+
+    .button-text{
+      font-size: 1.5em;
+      font-size: 0.8em;
+    }
+
+    .button-icon,
+    .button-text{
+      display:inline-block;
+    }
+
+  }
+
+  @media @onlyScreen and @portrait {
+    .cols();
+    .justifyContent(center, center);
+
+    .controller-button {
+      .cell(70px);
+
+      .button-icon,
+      .button-text{
+        display:block;
+      }
+
+
+    }
+  }
+
+}
+
+
+.app-body{
+  .rows();
+
+  .body-header{
+    .cell(55px);
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    .cols();
+
+    .body-header-left,
+    .body-header-right{
+      .cell(60px);
+
+    }
+
+    .body-header-center{
+      ._flex();
+    }
+
+  }
+
+
+
+  .body-content{
+    ._flex();
+  }
+
+  .body-footer{
+    .cell(30px);
+    background-color: rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0,0,0,0.3);
+  }
+
+  @media @onlyScreen and @portrait {
+    .body-header{
+      .cell(40px);
+    }
+    .body-footer{
+      display: none;
+    }
+  }
+
+}
+
+
+

@@ -236,7 +236,6 @@ If father is .ROWS
   overflow: hidden;
   .noFlex();
   .selfAlign();
-  .flexOrder();
 }
 
 .CELL._FLEX{ .flex(1) }
@@ -291,9 +290,9 @@ properties we can set a different align to a specific .CELL
 
 
 .flexOrder(@order:0){
-  -webkit-order: @order;
-  -ms-flex-order: @order;
-  order: @order;
+  -webkit-order: @order !important;
+  -ms-flex-order: @order !important;
+  order: @order !important;
 }
 
 .selfAlign(@align:auto, @old-legacy:auto){

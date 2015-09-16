@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "css/cssPlus-v.0.2-dist.css": "css/less.less" // destination file and source file
+                    "css/build/cssPlus-v.0.2-build.css": "css/less.less" // destination file and source file
                 }
             }
         },
