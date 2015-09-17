@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21453050-4d63-4b15-b0e6-e9a39c481f40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/cssPlus-v.0.2-dist.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/scaffoldingValues-backup.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/scaffoldingValues.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/Chubeka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/HanSolo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/darthVader.jpg" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/flex_layout-0.2.less" afterPath="$PROJECT_DIR$/css/source/flex_layout-0.2.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/cssPlusIcons.html" afterPath="$PROJECT_DIR$/css/source/icons/cssPlusIcons.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/FontAwesome.otf" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/FontAwesome.otf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/font-awesome.min.css" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/font-awesome.min.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/fontawesome-webfont.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/fontawesome-webfont.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/fontawesome-webfont.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/fontawesome-webfont.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/fontAwesome/generator.html" afterPath="$PROJECT_DIR$/css/source/icons/fontAwesome/generator.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/icons.less" afterPath="$PROJECT_DIR$/css/source/icons/icons.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/generator.html" afterPath="$PROJECT_DIR$/css/source/icons/themify/generator.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/themify-icons.css" afterPath="$PROJECT_DIR$/css/source/icons/themify/themify-icons.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/themify.eot" afterPath="$PROJECT_DIR$/css/source/icons/themify/themify.eot" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/themify.svg" afterPath="$PROJECT_DIR$/css/source/icons/themify/themify.svg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/themify.ttf" afterPath="$PROJECT_DIR$/css/source/icons/themify/themify.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/icons/themify/themify.woff" afterPath="$PROJECT_DIR$/css/source/icons/themify/themify.woff" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/mediaQuery.less" afterPath="$PROJECT_DIR$/css/source/mediaQuery.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/resolutionChecker.less" afterPath="$PROJECT_DIR$/css/source/resolutionChecker.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/resolutionCheckerDemo.less" afterPath="$PROJECT_DIR$/css/source/resolutionCheckerDemo.less" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/css/responsiveScaffoldingDemo.less" afterPath="$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo.html" afterPath="$PROJECT_DIR$/demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css" afterPath="$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/source/flex_layout-0.2.less" afterPath="$PROJECT_DIR$/css/source/flex_layout-0.2.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/less.less" afterPath="$PROJECT_DIR$/css/less.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resolutionChecker.html" afterPath="$PROJECT_DIR$/resolutionChecker.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/responsiveScaffolding.html" afterPath="$PROJECT_DIR$/responsiveScaffolding.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scaffolding.html" afterPath="$PROJECT_DIR$/scaffolding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less" afterPath="$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less" afterPath="$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cssPlus.iws" />
@@ -58,14 +30,14 @@
     <favorites_list name="cssPlus" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6429856">
+    <splitter split-orientation="horizontal" split-proportion="0.39820674">
       <split-first>
         <leaf>
           <file leaf-file-name="responsiveScaffolding.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/responsiveScaffolding.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.8807946" vertical-offset="634" max-vertical-offset="1995">
-                  <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
+                <state vertical-scroll-proportion="0.78066915" vertical-offset="0" max-vertical-offset="1215">
+                  <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
                   <folding />
                 </state>
               </provider>
@@ -74,8 +46,8 @@
           <file leaf-file-name="less.less" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/less.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="330">
-                  <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+                <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
+                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -84,7 +56,7 @@
           <file leaf-file-name="scaffolding.html" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scaffolding.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-15.25" vertical-offset="2319" max-vertical-offset="2955">
+                <state vertical-scroll-proportion="-111.875" vertical-offset="0" max-vertical-offset="2955">
                   <caret line="179" column="30" selection-start-line="173" selection-start-column="24" selection-end-line="179" selection-end-column="30" />
                   <folding />
                 </state>
@@ -94,7 +66,7 @@
           <file leaf-file-name="resolutionChecker.less" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/source/resolutionChecker.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="855">
+                <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="855">
                   <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
                   <folding />
                 </state>
@@ -104,8 +76,8 @@
           <file leaf-file-name="scaffoldingCssMetrics.less" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-22.5" vertical-offset="315" max-vertical-offset="1215">
-                  <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+                <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1290">
+                  <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -114,8 +86,8 @@
           <file leaf-file-name="scaffoldingInLineMetrics.less" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="615">
-                  <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+                <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="615">
+                  <caret line="29" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -128,18 +100,18 @@
           <file leaf-file-name="responsiveScaffoldingDemo.less" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.8224583" vertical-offset="0" max-vertical-offset="2070">
-                  <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.3202847" vertical-offset="0" max-vertical-offset="2010">
+                  <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="flex_layout-0.2.less" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/css/source/flex_layout-0.2.less">
+          <file leaf-file-name="cssPlus-v.0.2-build.css" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-7.52" vertical-offset="659" max-vertical-offset="6735">
-                  <caret line="69" column="33" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="33" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+                  <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -148,8 +120,8 @@
           <file leaf-file-name="mediaQuery.less" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/source/mediaQuery.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-13.125" vertical-offset="405" max-vertical-offset="2565">
-                  <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="54" selection-end-column="2" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2565">
+                  <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
@@ -193,15 +165,18 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/css/source/mediaQuery.less" />
         <option value="$PROJECT_DIR$/css/source/less.less" />
-        <option value="$PROJECT_DIR$/css/less.less" />
         <option value="$PROJECT_DIR$/scaffolding.html" />
         <option value="$PROJECT_DIR$/resolutionChecker.html" />
         <option value="$PROJECT_DIR$/demo.html" />
-        <option value="$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css" />
         <option value="$PROJECT_DIR$/css/source/icons/icons.less" />
-        <option value="$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less" />
+        <option value="$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less" />
         <option value="$PROJECT_DIR$/css/source/flex_layout-0.2.less" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/css/source/test.less" />
         <option value="$PROJECT_DIR$/responsiveScaffolding.html" />
+        <option value="$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less" />
+        <option value="$PROJECT_DIR$/css/less.less" />
+        <option value="$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css" />
         <option value="$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less" />
       </list>
     </option>
@@ -232,10 +207,10 @@
     <initial>false</initial>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="201" />
-    <option name="y" value="48" />
-    <option name="width" value="1154" />
-    <option name="height" value="839" />
+    <option name="x" value="532" />
+    <option name="y" value="32" />
+    <option name="width" value="2234" />
+    <option name="height" value="1338" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -335,6 +310,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cssPlus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cssPlus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -350,8 +343,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/css" />
+      <recent name="$PROJECT_DIR$/css/source" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/css" />
@@ -359,6 +353,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -369,12 +371,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -382,16 +386,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -415,16 +409,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="201" y="48" width="1154" height="839" extended-state="0" />
+    <frame x="532" y="32" width="2234" height="1338" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42168674" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28170145" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3102518" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1350365" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37951806" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -433,7 +427,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -444,20 +438,20 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282504" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37951806" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19277108" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28170145" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24391988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13412409" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -480,18 +474,18 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less">
+    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="825">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1695">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/source/mediaQuery.less">
+    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2565">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="615">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="63" />
           <folding />
         </state>
       </provider>
@@ -769,39 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29801324" vertical-offset="0" max-vertical-offset="1035">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/source/resolutionChecker.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="855">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8629243" vertical-offset="84194" max-vertical-offset="84960">
-          <caret line="5657" column="5" selection-start-line="5657" selection-start-column="5" selection-end-line="5657" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/source/mediaQuery.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.125" vertical-offset="405" max-vertical-offset="2565">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="54" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/less.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="330">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -809,54 +770,85 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40728477" vertical-offset="114" max-vertical-offset="46995">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/source/resolutionChecker.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="855">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less">
+    <entry file="file://$PROJECT_DIR$/css/source/mediaQuery.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="615">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.5" vertical-offset="315" max-vertical-offset="1215">
-          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1035" max-vertical-offset="2565">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scaffolding.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.25" vertical-offset="2319" max-vertical-offset="2955">
+        <state vertical-scroll-proportion="-111.875" vertical-offset="0" max-vertical-offset="2955">
           <caret line="179" column="30" selection-start-line="173" selection-start-column="24" selection-end-line="179" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/responsiveScaffolding.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8807946" vertical-offset="634" max-vertical-offset="1995">
-          <caret line="118" column="22" selection-start-line="118" selection-start-column="22" selection-end-line="118" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/source/flex_layout-0.2.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.52" vertical-offset="659" max-vertical-offset="6735">
-          <caret line="69" column="33" selection-start-line="69" selection-start-column="2" selection-end-line="69" selection-end-column="33" />
+        <state vertical-scroll-proportion="2.0818505" vertical-offset="0" max-vertical-offset="6750">
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/less.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="360">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingInLineMetrics.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="615">
+          <caret line="29" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/build/cssPlus-v.0.2-build.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/source/scaffoldingCssMetrics.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="1290">
+          <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/responsiveScaffolding.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78066915" vertical-offset="0" max-vertical-offset="1215">
+          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/source/responsiveScaffoldingDemo.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8224583" vertical-offset="0" max-vertical-offset="2070">
-          <caret line="124" column="17" selection-start-line="124" selection-start-column="17" selection-end-line="124" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.3202847" vertical-offset="0" max-vertical-offset="2010">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
           <folding />
         </state>
       </provider>

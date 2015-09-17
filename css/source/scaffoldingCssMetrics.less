@@ -1,35 +1,37 @@
+.cols{
+  .COLS();
+}
+
+.rows{
+  .ROWS();
+}
+
+.cell(@w:auto,@h:auto){
+  .CELL();
+  width: @w;
+}
+
+.flex{
+  .CELL._FLEX();
+}
+
+.w(@w){
+  height: 100%;
+  width: @w;
+}
+
+.h(@h){
+  width: 100%;
+  height: @h;
+}
+
+
+
 
 /*
 
--------------------
-CSS:
--------------------
-
-.container{
-  .rows();
-
-  .1st_element{
-    .cell(40%);
-  }
-
-  .2nd_element{
-    ._flex()
-  }
-
-  @media @onlyScreen and @mobile{
-    .cols();
-
-    .1st_element{
-      .cell(25%);
-    }
-  }
-
-}
-
-*/
-
-
 .rows {
+
   .flexContainersCommons(column, vertical);
 
   ._flex{
@@ -43,6 +45,7 @@ CSS:
     height: @v !important;
   }
 }
+
 
 
 .cols {
@@ -74,3 +77,5 @@ CSS:
   bottom: @v;
   right: @v;
 }
+
+*/
