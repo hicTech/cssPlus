@@ -2,6 +2,7 @@
 
   .cols();
 
+
   .elem_1{
     .cell();
     .w(200px);
@@ -52,17 +53,12 @@
 
 
 
-
 .cc{
   .rows();
 
 
 
 
-  .spacer{
-    .flex();
-    display: none;
-  }
 
   .button{
     .cell();
@@ -76,17 +72,12 @@
   }
 
   @media @onlyScreen and @mobile{
-    .cols();
+    .cols(jus-around);
 
     .button{
       .cell();
       .w(50px);
       background-color: rgba(255,255,255,0.3);
-      margin: 0px 20px;
-    }
-
-    .spacer{
-      display: block;
     }
 
 

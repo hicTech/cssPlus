@@ -1,10 +1,80 @@
-.cols{
+.extender,
+.ex{
+  .EXTENDER();
+}
+
+
+
+
+.cols(){
   .COLS();
 }
 
-.rows{
+.cols(@v) when (@v = reverse){
+  .COLS();
+  .COLS.REVERSE();
+}
+
+.cols(@v) when (@v = jus-center){
+  .COLS();
+  .COLS.JUS-CENTER();
+}
+
+.cols(@v) when (@v = jus-end){
+  .COLS();
+  .COLS.JUS-END();
+}
+
+.cols(@v) when (@v = jus-around){
+  .COLS();
+  .COLS.JUS-AROUND();
+}
+
+.cols(@v) when (@v = jus-between){
+  .COLS();
+  .COLS.JUS-BETWEEN();
+}
+
+
+
+
+
+
+
+
+
+.rows(){
   .ROWS();
 }
+
+
+.rows(@v) when (@v = reverse){
+  .ROWS();
+  .ROWS.REVERSE();
+}
+
+.rows(@v) when (@v = jus-center){
+  .ROWS();
+  .ROWS.JUS-CENTER();
+}
+
+.rows(@v) when (@v = jus-end){
+  .ROWS();
+  .ROWS.JUS-END();
+}
+
+.rows(@v) when (@v = jus-around){
+  .ROWS();
+  .ROWS.JUS-AROUND();
+}
+
+.rows(@v) when (@v = jus-between){
+  .ROWS();
+  .ROWS.JUS-BETWEEN();
+}
+
+
+
 
 .cell(@w:auto,@h:auto){
   .CELL();
@@ -15,6 +85,11 @@
   .CELL();
   .CELL._FLEX();
 }
+
+
+
+
+
 
 .w(@w){
   height: 100%;
@@ -28,55 +103,3 @@
 
 
 
-
-/*
-
-.rows {
-
-  .flexContainersCommons(column, vertical);
-
-  ._flex{
-    .CELL();
-    .CELL._FLEX();
-  }
-
-  .cell(@v:auto) {
-    .CELL();
-    width: 100% !important;
-    height: @v !important;
-  }
-}
-
-
-
-.cols {
-  .flexContainersCommons();
-
-  ._flex{
-    .CELL();
-    .CELL._FLEX();
-  }
-
-  .cell(@v:auto) {
-    .CELL();
-    height: 100% !important;
-    width: @v !important;
-  }
-
-}
-
-
-
-.extender {
-  .EXTENDER();
-}
-
-.padder(@v) {
-  position: absolute;
-  top: @v;
-  left: @v;
-  bottom: @v;
-  right: @v;
-}
-
-*/

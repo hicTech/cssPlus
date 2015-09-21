@@ -115,15 +115,24 @@ leave free from its siblings) and they would be already justified
   .justifyContent(flex-end, end);
 }
 
-.ROWS.JUS-AROUND,
+.ROWS.JUS-AROUND{
+  /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
+  .justifyContent(space-around, distribute);
+
+}
+
 .COLS.JUS-AROUND{
   /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
   .justifyContent(space-around, distribute);
 
 }
 
-.ROWS.JUS-BETWEEN
-.COLS.JUS-BETWEEN,{
+.ROWS.JUS-BETWEEN{
+  /* partial support:  FF 22+ */
+  .justifyContent(space-between, justify);
+}
+
+.COLS.JUS-BETWEEN{
   /* partial support:  FF 22+ */
   .justifyContent(space-between, justify);
 }
@@ -132,7 +141,7 @@ leave free from its siblings) and they would be already justified
 -------------------------- cross-axis properties --------------------------
                       .CENTER .END .STRETCH .BASELINE
 
-These properties manipulates the cross-axis disposition of the children by
+These properties manipulates the cross-axis disposition of ALL the children by
 align-items property. By default is .STRETCH so children fill all the cross-axis
 available space (height for .COLS and width for .ROWS)
 
