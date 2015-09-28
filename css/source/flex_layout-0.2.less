@@ -282,6 +282,10 @@ properties we can set a different align to a specific .CELL
   .selfAlign();
 }
 
+.CELL.START {
+  .selfAlign(flex-start, start);
+}
+
 .CELL.END {
   .selfAlign(flex-end, end);
 }
@@ -305,11 +309,12 @@ properties we can set a different align to a specific .CELL
   order: @order !important;
 }
 
-.selfAlign(@align:auto, @old-legacy:auto){
+.selfAlign(@align:stretch, @old-legacy:stretch){
   -webkit-align-self: @align;
   -ms-flex-item-align: @old-legacy;
   align-self: @align;
 }
+
 
 
 .noFlex{

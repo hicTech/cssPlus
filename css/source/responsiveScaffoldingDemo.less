@@ -15,6 +15,10 @@
 
   .elem_2{
     .flex();
+
+    .test-inline-rows-cols{
+      .testazzo();
+    }
   }
 
   .elem_3{
@@ -117,4 +121,32 @@
       .h(30px);
     }
   }
+}
+
+
+
+
+
+
+
+.testazzo{
+  .rows();
+
+  .in-line-1{
+    .cell(start);
+    .h(40px);
+    background-color: greenyellow;
+  }
+
+  .in-line-3{
+    .cell(end);
+    .h(140px);
+    background-color: greenyellow;
+  }
+
+  .in-line-2{
+    .flex();
+  }
+
+
 }

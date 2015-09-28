@@ -76,10 +76,40 @@
 
 
 
-.cell(@w:auto,@h:auto){
+.cell(){
   .CELL();
-  width: @w;
 }
+
+.cell(@v) when (@v = auto){
+  .CELL();
+  .CELL.AUTO();
+}
+
+.cell(@v) when (@v = start){
+  .CELL();
+  .CELL.START();
+}
+
+.cell(@v) when (@v = end){
+  .CELL();
+  .CELL.END();
+}
+
+.cell(@v) when (@v = center){
+  .CELL();
+  .CELL.CENTER();
+}
+
+.cell(@v) when (@v = stretch){
+  .CELL();
+  .CELL.STRETCH();
+}
+
+.cell(@v) when (@v = baseline){
+  .CELL();
+  .CELL.BASELINE();
+}
+
 
 .flex{
   .CELL();
@@ -92,12 +122,10 @@
 
 
 .w(@w){
-  height: 100%;
   width: @w;
 }
 
 .h(@h){
-  width: 100%;
   height: @h;
 }
 
