@@ -1,0 +1,58 @@
+body{
+
+    font-family: Helvetica, Arial;
+}
+
+.scrollMenu-menu{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 160px;
+    background-color: #f1f1f1;
+    border-right: solid 1px #d2d2d2;
+    height: 100%;
+}
+
+.scrollMenu-page{
+    position: absolute;
+    top: 0px;
+    left: 185px;
+    right: 25px;
+}
+
+
+
+
+
+#scrollMenu-menu-list {
+    font-size: 0.8em;
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+#scrollMenu-menu-list li {
+    margin: 5px 10px;
+    list-style: none;
+}
+
+#scrollMenu-menu-list a {
+    display: block;
+
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out;
+    color: #aaa;
+    text-decoration: none;
+}
+
+#scrollMenu-menu-list a:hover {
+    color: #000;
+}
+
+#scrollMenu-menu-list li.active a {
+
+    color: #333;
+}
+

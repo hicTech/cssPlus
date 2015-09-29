@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>cssPlus</title>
+
+
+    <link rel="stylesheet" href="css/build/cssPlus-v.0.2-build.css">
+    <link rel="stylesheet" href="js/jquery.snippet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery.snippet.js"></script>
+
+</head>
+<body>
+
+<style>
+
+    /* these classes just to show you all the containers */
+
+    .COL, .ROW, .ROW-FLEX, .COL-FLEX, .FITTER {
+        box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .sh_sourceCode{
+        font-family: 9px
+    }
+
+    pre div{
+        margin-top: 0px !important;
+    }
+
+
+
+</style>
+
+
+
+
+
+
+
+<div class="cssPlusSnippet">
+    <p>
+    <h3>Extender</h3>
+    <span>Posting a project is quick and easy, taking only a couple of minutes to answer a few simple questions. Within seconds of posting, your project will be live and ready to receive bids from millions of the world's best freelancersPosting a project is quick and easy, taking only a couple of minutes to answer a few simple questions. Within seconds of posting, your project will be live and ready to receive bids from millions of the world's best freelancers</span>
+    </p>
+    <pre class="htmlCode" style="width: 95%; margin: 0px auto">
+        <code>
+
+
+            <div class="EXTENDER" style="background-color: #ff0000">
+
+                text
+
+
+
+            </div>
+
+
+        </code>
+    </pre>
+</div>
+
+
+
+
+
+
+<div class="cssPlusSnippet">
+    <p>
+    <h3>Titolo</h3>
+    <span>Posting a project is quick and easy, taking only a couple of minutes to answer a few simple questions. Within seconds of posting, your project will be live and ready to receive bids from millions of the world's best freelancersPosting a project is quick and easy, taking only a couple of minutes to answer a few simple questions. Within seconds of posting, your project will be live and ready to receive bids from millions of the world's best freelancers</span>
+    </p>
+    <pre class="htmlCode" style="width: 95%; margin: 0px auto">
+        <code>
+
+
+            <div class="EXTENDER" style="background-color: #ff0000">
+
+                <div class="PADDER25">
+                    <div class="ROWS">
+                        <div class="CELL _50px" style="background-color: rgba(0,0,0,.3)">header</div>
+                        <div class="CELL _FLEX">body</div>
+                        <div class="CELL _30px" style="background-color: rgba(0,0,0,.3)">footer</div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <style>
+                .we{
+                    border: solid 1px;
+                }
+            </style>
+
+
+        </code>
+    </pre>
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        function escapeHTML(string) {
+            var pre = document.createElement('pre');
+            var text = document.createTextNode(string);
+            pre.appendChild(text);
+            return pre.innerHTML;
+        }
+
+
+        $("pre.htmlCode").each(function () {
+            var code = $(this).find("code").html();
+            var $code = $(this).find("code");
+            var escaped = escapeHTML(code);
+
+            //alert(escaped);
+
+            $code.html(escaped);
+            $(this).snippet("html", {style: "navy"});
+            $(this).find("li").each(function () {
+                if ($(this).find("code").html() == "" || $(this).find("code").text() == "")
+                    $(this).remove();
+            });
+
+            $(this).parents(".cssPlusSnippet").append("<div style='width: 80%; margin: 0px auto 50px; height: 200px; position: relative'>"+code+"</div>");
+        })
+
+
+    });
+
+
+</script>
