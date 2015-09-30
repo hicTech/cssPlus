@@ -24,7 +24,7 @@
 
         var defaults = {
             style:"random",
-            showNum:true,
+            showNum:false,
             transparent:false,
             collapse:false,
             menu:true,

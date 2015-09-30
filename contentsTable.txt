@@ -1,0 +1,12 @@
+
+- flexScaffolding.less
+        (defines flexible elements like ROWS, COLS, CELL and their alignments);
+
+- scaffoldingInlineMetrics.less
+        (provides shortcuts like _FLEX, _150px or _60pct)
+
+- scaffoldingCssMetrics.less
+        (provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignement)
+
+- mediaQuery.less
+        (defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density)
