@@ -13,10 +13,25 @@
 */
 
 .extender,
-.ex{
-  .EXTENDER();
+ .ex{
+   .EXTENDER();
+ }
+
+.padder(@v:10px){
+  position: absolute;
+  top: @v;
+  left: @v;
+  bottom: @v;
+  right: @v;
 }
 
+.padder-center{
+  .PADDER-CENTER();
+}
+
+.scrollable(){
+  .SCROLLABLE();
+}
 
 /*
             _

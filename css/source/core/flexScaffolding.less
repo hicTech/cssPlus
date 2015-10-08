@@ -49,7 +49,7 @@
 -------------------------- flex containers --------------------------
                             .ROWS .COLS
 
-Define if we want to split the space (the father's space / .EXTENDER) by rows or columns.
+Define if we want to split the space (the father's space / .EXTENDER or .PADDER) by rows or columns.
 Establishes the main-axis, thus defining the direction flex items are placed in the flex container
 
   .COLS
@@ -95,6 +95,34 @@ Establishes the main-axis, thus defining the direction flex items are placed in 
   .flexAlign(); /* cross-axis */
 }
 
+
+
+.containerNoFlex(@direction:row, @old_safari_legacy:horizontal) {
+  width: 100%;
+  height: 100%;
+  /* displayFlex() overwrite*/
+  display: inline;
+
+  /* flexDirection overwrite*/
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
+
+  /* justifyContent overwrite*/
+  -webkit-box-pack:start;
+  -webkit-justify-content:start;
+  -ms-flex-pack:start;
+  justify-content:start;
+
+  /* flexAlign */
+  -webkit-box-align:start;
+  -webkit-align-items:start;
+  -ms-flex-align:start;
+  align-items:start;
+
+}
 
 
 
@@ -296,7 +324,7 @@ If father is .ROWS
 .CELL{
   position: relative;
   overflow: hidden;
-  .noFlex();
+  .cellNoFlex();
   .selfAlign();
 }
 
@@ -377,7 +405,7 @@ properties we can set a different align to a specific .CELL
 
 
 
-.noFlex{
+.cellNoFlex{
   -webkit-box-ordinal-group: none;
   -moz-box-ordinal-group: none;
   -webkit-order: 0;
