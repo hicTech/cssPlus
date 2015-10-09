@@ -1,7 +1,18 @@
-@pink:#cf5bc6;
+/* Color App */
+@pink:#fd6b6c;
 @purple:#AF80F8;
-@blue:#7c8ff4;
-@green:#70D4CB;
+@blue:#54a7cf;
+@green:#21dcbf;
+
+@app-controller-background-color: #303d45;
+
+@primary-color-text-app: #fff;
+
+
+@hover-icon-backgroundcolor: #435059;
+@hover-icon-text-color: #ccc;
+
+@font-size-icon: 1.3em;
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
@@ -9,176 +20,227 @@
 
 /* APP */
 
-.app{
+.scaffolding {
 
   .extender();
   font: 1em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #fff;
 
-  .app-switcher{
 
+  .app-wrapper {
     .cols();
 
-    .app-controller-cell{
+    .app-controller{
       .cell();
-      background-color: @pink;
+      .w(150px);
+      .APP-CONTROLLER();
 
-      .w(170px);
-      @media @onlyScreen and @notebook-and-more{
-        .w(240px);
-      }
-
-      .app-controller-extender{
-        .appController();
-      }
     }
-
-    .app-body-cell{
+    .app-body{
       .flex();
+
     }
 
-    @media @onlyScreen and @mobile{
+  }
+
+  @media @onlyScreen and @tablet{
+    font-size: 80%;
+    .app-wrapper {
       .rows();
-      .app-controller-cell{
-        .h(120px);
+
+      .app-controller{
+
       }
+      .app-body{
+
+
+      }
+
     }
   }
 
   @media @onlyScreen and @mobile{
-    font-size: 0.80em;
-  }
+    font-size: 50%;
+    .app-wrapper {
+      .rows(reverse);
+      .app-controller{
 
-  @media @onlyScreen and @notebook-and-more{
-    font-size: 1.25em;
-  }
+      }
+      .app-body{
 
-  @media @onlyScreen and @smallmobile{
-
-    .app-switcher{
-      .containerNoFlex();
-
-      .app-controller-cell{
-        .cellNoFlex();
-        width: 100%;
-        height: 100%;
       }
     }
 
   }
-
 }
 
 
 
+///////////////////////////* Controller *///////////////////////////
 
+.APP-CONTROLLER{
 
+  background-color: @app-controller-background-color ;
 
+  .controller-wrapper{
+    .rows();
 
-/* CONTROLLER */
+    .controller-up{
+      .cell();
+      .h(60px);
 
-.appController{
-  .extender();
-  color: #ffffff;
-  font-size: 1em;
+      .controller-up-wrapper{
+        .cols();
 
-  .app-controller-switcher{
-    .rows(jus-center);
+        .controller-up-item{
+          .cell();
+          .w(50%);
 
-    .controller-item{
-      .controllerItem();
-    }
+          .container-controller-up-item{
+            height: 50px;
+            line-height:50px;
+            width: 50px;
+            text-align: center;
+            color: @primary-color-text-app;
+            border-radius: 5px;
+            cursor:pointer;
+            &:hover {
+              background-color: @hover-icon-backgroundcolor;
+              color: @hover-icon-text-color;
+            }
 
-    @media @onlyScreen and @mobile{
-      .cols(jus-center);
-    }
-
-
-    @media @onlyScreen and @smallmobile{
-      .containerNoFlex();
-    }
-
-  }
-
-}
-
-
-
-
-
-/* CONTROLLER ITEM */
-.controllerItem{
-  .cell();
-
-  padding: 20px 0px;
-
-  i,div{
-    float:right;
-  }
-
-  i{
-    margin: 0px 10px 0px 20px;
-    font-size: 1.5em;
-  }
-
-
-  @media @onlyScreen and @mobile{
-
-      .cell(end);
-      .w(auto,60px);
-      padding: 0px 10px;
-
-      i,div{
-        clear: both;
-
-      }
-
-      div{
-        margin: 5px 0px;
-      }
-    }
-
-  @media @onlyScreen and @smallmobile{
-
-    .cellNoFlex();
-    width: 50%;
-    height: 50%;
-    float: left;
-    padding: 0px;
-
-      .controller-item-extender{
-        .extender();
-
-        .controller-item-padder{
-          .padder-center();
-
-          div{
-            display: none;
+            .item-up{
+              font-size: @font-size-icon;
+            }
           }
+        }
+      }
+    }
+    .controller-container-img{
+      .cell();
+      .h(125px);
 
-          i{
-            font-size: 1.8em;
+      .container-img{
+        width: 100px;
+        height: 100px;
+        overflow:hidden;
+        border-radius: 50px;
+
+        img{
+          width: 100px;
+        }
+      }
+    }
+    .container-controller-item{
+      .cell();
+      .h(60px);
+
+      .controller-item{
+        height: 55px;
+        line-height: 55px;
+        width: 85px;
+        text-align: center;
+        color: @primary-color-text-app;
+        border-radius: 5px;
+        cursor:pointer;
+        &:hover {
+          background-color: @hover-icon-backgroundcolor;
+          color: @hover-icon-text-color;
+        }
+        .fonts-item{
+          font-size: @font-size-icon;
+        }
+      }
+    }
+  }
+
+  @media @onlyScreen and @tablet{
+    .h(80px);
+
+    .controller-wrapper{
+      .cols();
+
+      .controller-up{
+        .w(100px);
+
+        .controller-up-wrapper {
+          .controller-up-item {
+            .container-controller-up-item {
+              height: 40px;
+              line-height:40px;
+              width: 40px;
+            }
+          }
+        }
+      }
+      .controller-container-img{
+        .cell();
+        .w(80px);
+
+        .container-img {
+          width: 60px;
+          height: 60px;
+          img{
+            width: 60px;
+          }
+        }
+      }
+      .container-controller-item{
+        .cell();
+        .w(60px);
+
+        .controller-item{
+          height: 40px;
+          line-height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+  @media @onlyScreen and @mobile{
+    .h(40px);
+
+    .controller-wrapper{
+      .cols();
+
+      .controller-up{
+        .cell();
+        .w(60px);
+
+        .controller-up-wrapper {
+          .controller-up-item {
+            .container-controller-up-item {
+              height: 25px;
+              line-height: 25px;
+              width: 25px;
+            }
           }
         }
       }
 
-     &:nth-child(2){
-        background-color: @blue;
+      .controller-container-img{
+        .cell();
+        .w(40px);
+
+        .container-img {
+          width: 30px;
+          height: 30px;
+          img{
+            width: 30px;
+          }
+        }
       }
 
-    &:nth-child(3){
-      background-color: @green;
+      .container-controller-item{
+        .cell();
+        .w(40px);
+
+        .controller-item{
+          height: 25px;
+          line-height: 25px;
+          width: 25px;
+        }
+      }
     }
-
-    &:nth-child(4){
-      background-color: @purple;
-    }
-
-
-
-    }
-
-
-
-
+  }
 }
