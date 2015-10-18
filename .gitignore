@@ -6,5 +6,9 @@
 .idea/vcs.xml
 
 .idea/workspace.xml
+<<<<<<< HEAD
 
 .idea/inspectionProfiles/Project_Default.xml
+=======
+.idea/watcherTasks.xml
+>>>>>>> origin/candidate
