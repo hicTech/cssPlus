@@ -24,7 +24,7 @@
     "url": "https://github.com/hicTech/cssPlus.git"
   },
   "keywords": [
-    "flaxbox",
+    "flexbox",
     "layout",
     "css",
     "cssPlus"
@@ -34,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/hicTech/cssPlus/issues"
   },
-  "homepage": "https://github.com/hicTech/cssPlus"
+  "homepage": "www.css.plus"
 }

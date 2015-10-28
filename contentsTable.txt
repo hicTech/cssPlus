@@ -1,12 +1,50 @@
 
-- flexScaffolding.less
-        (defines flexible elements like ROWS, COLS, CELL and their alignments);
 
-- scaffoldingInlineMetrics.less
-        (provides shortcuts like _FLEX, _150px or _60pct)
+ ----------- CORE -----------
 
-- scaffoldingCssMetrics.less
-        (provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignement)
+    source/core/*.less  ======> build/core.css
 
-- mediaQuery.less
-        (defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density)
+    - flexScaffolding.less
+            DESCRIPTION: defines flexible elements like ROWS, COLS, CELL and their alignments
+            DEPENDENCIES: none
+
+    - scaffoldingInlineMetrics.less
+            DESCRIPTION: provides shortcuts like _FLEX, _150px or _60pct for in HTML class uses
+            DEPENDENCIES: none
+
+    - scaffoldingCssMetrics.less
+            DESCRIPTION: provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignments
+            DEPENDENCIES: flexScaffolding.less
+
+    - mediaQuery.less
+            DESCRIPTION: defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density
+            DEPENDENCIES: none
+
+
+
+
+
+
+
+ ----------- PLUGINS -----------
+
+    source/plugins/*.less =====> build/plugins.css
+
+    - resolutionChecker.less
+        DESCRIPTION: adds :before and :after pseudo-tags to body tag to check current device and orientation (bottom-left corner of the page)
+        DEPENDENCIES: mediaQuery.less
+
+    - icons.less
+        DESCRIPTION: create inline shortcuts for icon (fontawesome and themify) fa-home or ti-arrow-up
+        DEPENDENCIES: none
+
+
+
+
+
+
+ ----------- DEMOS -----------
+
+    source/demos/*.less  ======> build/demos.css
+
+    - all .less files in this directory will built in demos.css, now it's used for demos css files.

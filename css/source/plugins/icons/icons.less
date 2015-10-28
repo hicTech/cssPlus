@@ -2,13 +2,21 @@
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
+
+/* this is the path from plugins.css (build) to plugins/icons folder (source) */
+@icons_folder_absolute_path : "../source/plugins/icons";
+
+
+
+
+
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../source/plugins/icons/fontAwesome/fontawesome-webfont.eot');
-  src: url('../source/plugins/icons/fontAwesome/fontawesome-webfont.eot') format('embedded-opentype'),
-  url('../source/plugins/icons/fontAwesome/fontawesome-webfont.woff') format('woff'),
-  url('../source/plugins/icons/fontAwesome/fontawesome-webfont.ttf') format('truetype'),
-  url('../source/plugins/icons/fontAwesome/fontawesome-webfont.svg') format('svg');
+  src: url('@{icons_folder_absolute_path}/fontAwesome/fontawesome-webfont.eot');
+  src: url(' ~"@{icons_folder_absolute_path}/fontAwesome/fontawesome-webfont.eot') format('embedded-opentype'),
+  url('@{icons_folder_absolute_path}/fontAwesome/fontawesome-webfont.woff') format('woff'),
+  url('@{icons_folder_absolute_path}/fontAwesome/fontawesome-webfont.ttf') format('truetype'),
+  url('@{icons_folder_absolute_path}/fontAwesome/fontawesome-webfont.svg') format('svg');
   font-weight: normal;
   font-style: normal
 
@@ -18,11 +26,11 @@
 
 @font-face {
   font-family: 'themify';
-  src:url('../source/plugins/icons/themify/themify.eot');
-  src:url('../source/plugins/icons/themify/themify.eot') format('embedded-opentype'),
-  url('../source/plugins/icons/themify/themify.woff') format('woff'),
-  url('../source/plugins/icons/themify/themify.ttf') format('truetype'),
-  url('../source/plugins/icons/themify/themify.svg') format('svg');
+  src:url('@{icons_folder_absolute_path}/themify/themify.eot');
+  src:url('@{icons_folder_absolute_path}/themify/themify.eot') format('embedded-opentype'),
+  url('@{icons_folder_absolute_path}/themify/themify.woff') format('woff'),
+  url('@{icons_folder_absolute_path}/themify/themify.ttf') format('truetype'),
+  url('@{icons_folder_absolute_path}/themify/themify.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

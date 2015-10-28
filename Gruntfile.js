@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 files: {
                     "css/build/core.css": ['css/source/core/**/*.less'] ,
                     "css/build/plugins.css": ['css/source/plugins/**/*.less'],
-                    "css/build/demos.css": ['css/demos/**/*.less']
+                    "css/build/demos.css": ['css/source/demos/**/*.less']
                 }
             }
         },
@@ -50,9 +50,3 @@ module.exports = function(grunt) {
 
 
 
-
-/*
- files:{
- "css/build/cssPlus-v.0.2-build.css": "css/less.less" // destination file and source file
- }
- */
