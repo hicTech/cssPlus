@@ -1,4 +1,4 @@
-@import "../core/scaffoldingCssMetrics";
+@import (reference) "../core/flexScaffolding";
 @import "../core/mediaQuery";
 
 
@@ -44,6 +44,7 @@
 /* APP */
 
 .scaffolding {
+
 
   .extender();
   font: @text-size-desktop Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -129,7 +130,7 @@
   }
 
   @media @onlyScreen and @smallmobile{
-
+    border-radius: 30px;
     .app-wrapper {
       .containerNoFlex();
 

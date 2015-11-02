@@ -1,5 +1,2 @@
-
-
-.idea/*.*
-
-css/demos/responsiveScaffoldingDemo-mattia.less
+.idea/
+.css/build/

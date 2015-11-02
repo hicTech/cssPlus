@@ -32,6 +32,20 @@ module.exports = function(grunt) {
                     nospawn: true
                 }
             }
+        },
+
+        clean: ["css/build/build.min.css"],
+
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    'css/build/build.min.css': 'css/build/*.css'
+                }
+            }
         }
 
 
@@ -43,8 +57,12 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['watch']);
+
+
+    grunt.registerTask('minifyBuild', ['less','clean','cssmin']);
 
 };
 
