@@ -1,27 +1,25 @@
 @import (reference) "../core/flexScaffolding";
 @import "../core/mediaQuery";
 
-@pink:#cf5bc6;
-@purple:#AF80F8;
-@blue:#7c8ff4;
-@green:#70D4CB;
+@pink: #cf5bc6;
+@purple: #AF80F8;
+@blue: #7c8ff4;
+@green: #70D4CB;
 
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
-
-
 /* APP */
 
-.app{
+.app {
   .extender();
   font: 1em Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
 
-  .app-switcher{
+  .app-switcher {
 
     .cols();
 
-    .app-controller-cell{
+    .app-controller-cell {
       .cell();
       background-color: @pink;
 
@@ -30,18 +28,18 @@
         .w(240px);
       }
 
-      .app-controller-extender{
+      .app-controller-extender {
         .appController();
       }
     }
 
-    .app-body-cell{
+    .app-body-cell {
       .flex();
     }
 
     @media @onlyScreen and @mobile{
       .rows();
-      .app-controller-cell{
+      .app-controller-cell {
         .h(120px);
       }
     }
@@ -57,14 +55,13 @@
 
   @media @onlyScreen and @smallmobile{
 
-    .app-switcher{
+    .app-switcher {
       .containerNoFlex();
 
-      .app-controller-cell{
+      .app-controller-cell {
         .cellNoFlex();
         width: 100%;
         height: 100%;
-
 
       }
     }
@@ -73,30 +70,23 @@
 
 }
 
-
-
-
-
-
-
 /* CONTROLLER */
 
-.appController{
+.appController {
   .extender();
   color: #ffffff;
   font-size: 1em;
 
-  .app-controller-switcher{
+  .app-controller-switcher {
     .rows(jus-center);
 
-    .controller-item{
+    .controller-item {
       .controllerItem();
     }
 
     @media @onlyScreen and @mobile{
       .cols(jus-center);
     }
-
 
     @media @onlyScreen and @smallmobile{
       .containerNoFlex();
@@ -106,43 +96,37 @@
 
 }
 
-
-
-
-
-/* CONTROLLER ITEM */
-.controllerItem{
+/* CONTROLLER ITEMS */
+.controllerItem {
   .cell();
 
   padding: 20px 0px;
 
-  i,div{
-    float:right;
+  i, div {
+    float: right;
   }
 
-  i{
+  i {
     margin: 0px 10px 0px 20px;
     font-size: 1.5em;
   }
 
-
   @media @onlyScreen and @mobile{
 
-      .cell(end);
-      .w(auto,60px);
-      padding: 0px 10px;
+    .cell(end);
+    .w(auto, 60px);
+    padding: 0px 10px;
 
-      i,div{
-        clear: both;
-
-      }
-
-      div{
-        margin: 5px 0px;
-      }
-
+    i, div {
+      clear: both;
 
     }
+
+    div {
+      margin: 5px 0px;
+    }
+
+  }
 
   @media @onlyScreen and @smallmobile{
 
@@ -152,39 +136,34 @@
     float: left;
     padding: 0px;
 
-      .controller-item-extender{
-        .extender();
+    .controller-item-extender {
+      .extender();
 
-        .controller-item-padder{
-          .padder-center();
+      .controller-item-padder {
+        .padder-center();
 
-          div{
-            display: none;
-          }
+        div {
+          display: none;
+        }
 
-          i{
-            font-size: 1.8em;
-          }
+        i {
+          font-size: 1.8em;
         }
       }
+    }
 
-     &:nth-child(2){
-        background-color: @blue;
-      }
+    &:nth-child(2) {
+      background-color: @blue;
+    }
 
-    &:nth-child(3){
+    &:nth-child(3) {
       background-color: @green;
     }
 
-    &:nth-child(4){
+    &:nth-child(4) {
       background-color: @purple;
     }
 
-
-
-    }
-
-
-
+  }
 
 }

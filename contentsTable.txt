@@ -4,25 +4,13 @@
 
     source/core/*.less  ======> build/core.css
 
-    - flexScaffolding.less
-            DESCRIPTION: defines flexible elements like ROWS, COLS, CELL and their alignments
-            DEPENDENCIES: none
+    flexScaffolding.less
+        - defines flexible elements like ROWS, COLS, CELL and their alignments
+        - provides shortcuts like _FLEX, _150px or _60pct for in HTML class uses
+        - provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignments
 
-    - scaffoldingInlineMetrics.less
-            DESCRIPTION: provides shortcuts like _FLEX, _150px or _60pct for in HTML class uses
-            DEPENDENCIES: none
-
-    - scaffoldingCssMetrics.less
-            DESCRIPTION: provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignments
-            DEPENDENCIES: flexScaffolding.less
-
-    - mediaQuery.less
-            DESCRIPTION: defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density
-            DEPENDENCIES: none
-
-
-
-
+    mediaQuery.less
+        - defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density
 
 
 
@@ -40,11 +28,21 @@
 
 
 
-
-
-
  ----------- DEMOS -----------
 
     source/demos/*.less  ======> build/demos.css
 
     - all .less files in this directory will built in demos.css, now it's used for demos css files.
+
+
+
+
+
+ ----------- GRUNT -----------
+
+    Grunt tasks:
+        - less: create 3 css builds (core, demo and plugins) each one from respective folders;
+        - watch: initializes a watcher on all less files in CSS folder;
+        - cssmin: minify all css files inside build folder and generates a build.min.css
+        - clean: a basilar tool to delete a file
+        - minifyBuild: less + clean + cssmin
