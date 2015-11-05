@@ -15,7 +15,7 @@
 
 
     <script src="../js/jquery-2.1.1.min.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="../js/jqueryUI.js"></script>
 
 
 
@@ -25,19 +25,20 @@
 
 
 <style>
+    body{
+        font-family: Helvetica;
+    }
+
     .devices-container{
         width: 1000px;
         height: 740px;
         position: relative;
     }
-    body:after,
-    body:before{
-        display: none;
-    }
+
 </style>
 
 
-
+<div style="position: fixed; z-index: 999999">more info: <a href="http://www.css.plus" target="_blank">www.css.plus</a></div>
 <div class="EXTENDER">
     <div class="PADDER-CENTER">
         <div class="devices-container">
@@ -63,17 +64,6 @@
         start: function (event,ui) {
             clearTimeout(timeout);
             $(".mouse-catcher").show();
-
-
-        },
-        stop: function (event, ui) {
-            $(".mouse-catcher").hide();
-            timeout = setTimeout(function () {
-                $('.bla').animate({
-                    "width": "1000px",
-                    "height": "740px"
-                }, {duration: 1500, easing: 'easeOutBounce'})
-            }, 10000);
         }
     });
 
