@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 files: {
                     "css/build/core.css": ['css/source/core/**/*.less'] ,
                     "css/build/plugins.css": ['css/source/plugins/**/*.less'],
-                    "css/build/demos.css": ['css/source/demos/**/*.less']
+                    "css/build/customs.css": ['css/source/customs/**/*.less']
                 }
             }
         },
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
             }
         },
 
-        clean: ["css/build/build.min.css"],
+        clean: ["css/build/cssPlus-v.0.2-build.css"],
 
         cssmin: {
             options: {
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    'css/build/build.min.css': 'css/build/*.css'
+                    'css/build/cssPlus-v.0.2-build.css': 'css/build/*.css'
                 }
             }
         }

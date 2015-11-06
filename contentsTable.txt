@@ -28,12 +28,12 @@
 
 
 
- ----------- DEMOS -----------
+ ----------- CUSTOMS -----------
 
-    source/demos/*.less  ======> build/demos.css
+    source/customs/*.less  ======> build/customs.css
 
-    - all .less files in this directory will built in demos.css, now it's used for demos css files.
-
+    - all .less files in this directory will built in customs.css
+    - use this directory for your custom app less files
 
 
 
@@ -43,6 +43,6 @@
     Grunt tasks:
         - less: create 3 css builds (core, demo and plugins) each one from respective folders;
         - watch: initializes a watcher on all less files in CSS folder;
-        - cssmin: minify all css files inside build folder and generates a build.min.css
+        - cssmin: minify all css files inside build folder and generates a cssPlus-v.0.2-build.css
         - clean: a basilar tool to delete a file
         - minifyBuild: less + clean + cssmin
