@@ -11,16 +11,21 @@ CssPlus want to provide a simple and fast way to realize flexible and responsive
 
 
 <h4>Demos</h4>
-### [Demo 1](http://hictech.github.io/cssPlusWebsite/demo.html)
-### [Demo 2](http://hictech.github.io/cssPlusWebsite/demo2.html)
-### [Demo 3](http://hictech.github.io/cssPlusWebsite/demo3.html)
-### [In-line syntax demo](http://hictech.github.io/cssPlusWebsite/inLineDemo.html)
-### [Simple Scaffolding](http://hictech.github.io/cssPlusWebsite/simpleScaffolding.html)
-### [Responsive controller](http://hictech.github.io/cssPlusWebsite/devicesResponsiveController.html)
-### [Responsive UI](http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html)
-### [Resolutions Checker](http://hictech.github.io/cssPlusWebsite/resolutionChecker.html)
+<a href="http://hictech.github.io/cssPlusWebsite/demo.html">Demo 1</a>
+<a href="http://hictech.github.io/cssPlusWebsite/demo2.html">Demo 2</a>
+<a href="http://hictech.github.io/cssPlusWebsite/demo3.html">Demo 3</a>
+<a href="http://hictech.github.io/cssPlusWebsite/inLineDemo.html">In-line syntax demo</a>
+<a href="http://hictech.github.io/cssPlusWebsite/simpleScaffolding.html">Simple Scaffolding</a>
+<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveController.html">Responsive controller</a>
+<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html">Responsive UI</a>
+<a href="http://hictech.github.io/cssPlusWebsite/resolutionChecker.html">Resolutions Checker</a>
+
+
+
+
+
 
 
 <h4>Playground</h4>
+<a href="http://codepen.io/collection/APYVvy/">CSS+ 0.2 codepens collection</a>
 
-### [CSS+ 0.2 codepens collection](http://codepen.io/collection/APYVvy/)
