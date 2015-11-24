@@ -15,9 +15,9 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "css/build/core.css": ['css/source/core/**/*.less'] ,
-                    "css/build/plugins.css": ['css/source/plugins/**/*.less'],
-                    "css/build/customs.css": ['css/source/customs/**/*.less']
+                    "css/build/core.css": ['css/sources/core/**/*.less'] ,
+                    "css/build/plugins.css": ['css/sources/plugins/**/*.less'],
+                    "css/build/customs.css": ['css/sources/customs/**/*.less']
                 }
             }
         },
