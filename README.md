@@ -10,15 +10,20 @@ CssPlus want to provide a simple and fast way to realize flexible and responsive
 <a href="http://www.css.plus">More informations</a>
 
 
+<h4>Usage</h4>
+<a href="http://hictech.github.io/cssPlusWebsite/basicUsage.html">Basic Usage</a>
+<a href="http://hictech.github.io/cssPlusWebsite/alignments.html">In-line syntax</a>
+<a href="http://hictech.github.io/cssPlusWebsite/alignments_css.html">CSS syntax</a>
+
 <h4>Demos</h4>
-<a href="http://hictech.github.io/cssPlusWebsite/demo.html">Demo 1</a>
-<a href="http://hictech.github.io/cssPlusWebsite/demo2.html">Demo 2</a>
-<a href="http://hictech.github.io/cssPlusWebsite/demo3.html">Demo 3</a>
-<a href="http://hictech.github.io/cssPlusWebsite/inLineDemo.html">In-line syntax demo</a>
-<a href="http://hictech.github.io/cssPlusWebsite/simpleScaffolding.html">Simple Scaffolding</a>
-<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveController.html">Responsive controller</a>
-<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html">Responsive UI</a>
-<a href="http://hictech.github.io/cssPlusWebsite/resolutionChecker.html">Resolutions Checker</a>
+<a href="http://hictech.github.io/cssPlusWebsite/demo.html">Demo 1</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/demo2.html">Demo 2</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/demo3.html">Demo 3</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/inLineDemo.html">In-line syntax demo</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/simpleScaffolding.html">Simple Scaffolding</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveController.html">Responsive controller</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html">Responsive UI</a><br>
+<a href="http://hictech.github.io/cssPlusWebsite/resolutionChecker.html">Resolutions Checker</a><br>
 
 
 
