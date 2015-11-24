@@ -10,7 +10,7 @@ CssPlus want to provide a simple and fast way to realize flexible and responsive
 <a href="http://www.css.plus">More informations</a>
 
 
-<h1>Demos</h1>
+<h4>Demos</h4>
 ### [Demo 1](http://hictech.github.io/cssPlusWebsite/demo.html)
 ### [Demo 2](http://hictech.github.io/cssPlusWebsite/demo2.html)
 ### [Demo 3](http://hictech.github.io/cssPlusWebsite/demo3.html)
@@ -20,3 +20,7 @@ CssPlus want to provide a simple and fast way to realize flexible and responsive
 ### [Responsive UI](http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html)
 ### [Resolutions Checker](http://hictech.github.io/cssPlusWebsite/resolutionChecker.html)
 
+
+<h4>Playground</h4>
+
+### [CSS+ 0.2 codepens collection](http://codepen.io/collection/APYVvy/)
