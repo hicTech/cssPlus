@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS+</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="stylesheet" href="../css/build/core.css">
+    <link rel="stylesheet" href="../css/build/plugins.css">
+    <link rel="stylesheet" href="../css/build/customs.css">
+
+    <!--
+    <link rel="stylesheet/less" type="text/css" href="css/less.less">
+    <script src="js/less.js"></script>
+    -->
+
+</head>
+<body>
+
+<style>
+
+    /* this is just to show all the CELL(s) */
+   .CELL{
+       box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.25);
+   }
+
+
+
+
+</style>
+
+
+<div class="EXTENDER">
+    <div class="COLS">
+        <div class="CELL _200px" style="background-color: #85ff85">
+            <div class="EXTENDER">
+                <div class="ROWS JUS-CENTER">
+                    <div class="CELL" style="height: 25px">centered</div>
+                    <div class="CELL" style="height: 25px">centered</div>
+                    <div class="CELL" style="height: 25px">centered</div>
+                </div>
+            </div>
+        </div>
+        <div class="CELL _FLEX">
+            <div class="EXTENDER">
+                <div class="ROWS REVERSE">
+                    <div class="CELL" style="height: 30px"> footer </div>
+                    <div class="CELL _FLEX">
+                        <div class="EXTENDER">
+                            <div class="PADDER25" style="border: solid">
+                                <div class="ROWS">
+                                    <div class="CELL COLS JUS-AROUND" style="height: 50px">
+                                        <div class="CELL" style="width: 40px"> A </div>
+                                        <div class="CELL" style="width: 40px"> B </div>
+                                        <div class="CELL" style="width: 40px"> C </div>
+                                    </div>
+
+                                    <div class="CELL _FLEX">
+                                        this is an example of in-line syntax
+                                    </div>
+
+                                    <div class="CELL COLS JUS-END" style="height: 50px">
+                                        <div class="CELL" style="width: 40px"> END </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="CELL" style="height: 60px"> header </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+

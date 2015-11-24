@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS+</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/jqueryUI.js"></script>
+
+    <link rel="stylesheet" href="../css/build/core.css">
+    <link rel="stylesheet" href="../css/build/customs.css">
+
+</head>
+<body>
+
+
+
+<style>
+    body{
+        font-family: Helvetica;
+    }
+    .devices-container{
+        width: 1000px;
+        height: 740px;
+        position: relative;
+    }
+
+</style>
+
+
+
+<div class="EXTENDER">
+    <div class="PADDER-CENTER">
+
+
+            <div class="devices-container">
+                <div class="mouse-catcher"></div>
+                <div class='handler ui-resizable-handle ui-resizable-se'></div>
+                <iframe src="responsiveController.html" width="100%" height="100%" style="border: none"></iframe>
+            </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    var timeout;
+    $('.devices-container').resizable({
+        handles: {
+            'se': '.handler'
+        },
+        minHeight: 320,
+        minWidth: 300,
+        start: function (event,ui) {
+            clearTimeout(timeout);
+            $(".mouse-catcher").show();
+
+
+        }
+    });
+
+</script>
+

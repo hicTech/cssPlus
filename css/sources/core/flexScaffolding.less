@@ -1,0 +1,960 @@
+/*!   flexScaffolding 0.2  */
+
+/*
+  _____  _______ ___ _  _ ___  ___ ___
+ | __\ \/ /_   _| __| \| |   \| __| _ \
+ | _| >  <  | | | _|| .` | |) | _||   /
+ |___/_/\_\ |_| |___|_|\_|___/|___|_|_\
+
+
+  -------------------------- root container --------------------------
+                            .EXTENDER .EX(alias)
+
+  Provides a container that fits all the available space and lets
+  .ROWS/.COLS to stretch and fill the available height/width
+
+  --------------------------------------------------------------------
+*/
+.EXTENDER,.EX {
+  position: absolute;
+  top: 0px;
+
+
+
+
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+/*
+  ___  _____      _____    __        ___ ___  _    ___
+ | _ \/ _ \ \    / / __|  / _|___   / __/ _ \| |  / __|
+ |   / (_) \ \/\/ /\__ \  > _|_ _| | (_| (_) | |__\__ \
+ |_|_\\___/ \_/\_/ |___/  \_____|   \___\___/|____|___/
+
+
+-------------------------- flex containers --------------------------
+                            .ROWS .COLS
+
+Define if we want to split the space (the father's space / .EXTENDER or .PADDER) by rows or columns.
+Establishes the main-axis, thus defining the direction flex items are placed in the flex container
+
+  .COLS
+     - forces its children (.CELL) to be 100% height columns;
+     - main-axis : horizontal
+     - cross-axis: vertical
+
+  .ROWS
+    - forces its children (.CELL) to be 100% width rows
+    - main-axis: vertical
+    - cross-axis: horizontal
+
+  .REVERSE [optional]
+    - reverses the order of the children
+
+--------------------------------------------------------------------
+*/
+.COLS{
+  .flexContainersCommons();
+}
+
+.COLS.REVERSE{
+  .flexDirection(row-reverse);
+}
+
+
+
+.ROWS{
+  .flexContainersCommons(column, vertical);
+}
+
+.ROWS.REVERSE{
+  .flexDirection(column-reverse);
+}
+
+
+.flexContainersCommons(@direction:row, @old_safari_legacy:horizontal) {
+  width: 100%;
+  height: 100%;
+  .displayFlex();
+  .flexDirection(@direction, @old_safari_legacy);
+  .justifyContent(); /* main-axis */
+  .flexAlign(); /* cross-axis */
+}
+
+
+
+.containerNoFlex(@direction:row, @old_safari_legacy:horizontal) {
+  width: 100%;
+  height: 100%;
+  /* displayFlex() overwrite*/
+  display: inline;
+
+  /* flexDirection overwrite*/
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  -webkit-flex-direction:row;
+  -ms-flex-direction:row;
+  flex-direction:row;
+
+  /* justifyContent overwrite*/
+  -webkit-box-pack:start;
+  -webkit-justify-content:start;
+  -ms-flex-pack:start;
+  justify-content:start;
+
+  /* flexAlign */
+  -webkit-box-align:start;
+  -webkit-align-items:start;
+  -ms-flex-align:start;
+  align-items:start;
+
+}
+
+
+
+
+
+
+
+
+/*
+
+     _ _   _ ___ _____ ___ _____   __
+  _ | | | | / __|_   _|_ _| __\ \ / /
+ | || | |_| \__ \ | |  | || _| \ V /
+  \__/ \___/|___/ |_| |___|_|   |_|
+
+-------------------------- main-axis properties --------------------------
+                .JUS-CENTER .JUS-END .JUS-AROUND .JUS-BETWEEN
+
+These properties manipulates the main-axis disposition of the children.
+They can be applied only to ROWS and COLS.
+JUS- stands for justify and they work only if ROWS and COLS doesn't contains flex children.
+In Fact, a flexible child will take all the available space (the space
+leave free from its siblings) and they would be justified
+
+  .JUS-CENTER: children will be centered without margin between them
+
+  .JUS-END: children will be right|bottom aligned without margin between them
+
+  .JUS-START: (default) children will be left|top aligned and without margin between them
+
+  .JUS-BETWEEN: The space is divided evenly in-between each child, with none of the extra
+                space placed before the first child or after the last child
+
+  .JUS-AROUND:  same behavior of .JUS-BETWEEN but the margin of the last and the first child
+                will be half the margin between the various children
+
+
+--------------------------------------------------------------------
+*/
+.ROWS.JUS-CENTER,
+.COLS.JUS-CENTER{
+  .justifyContent(center, center);
+}
+
+.ROWS.JUS-END,
+.COLS.JUS-END{
+  .justifyContent(flex-end, end);
+}
+
+.ROWS.JUS-AROUND{
+  /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
+  .justifyContent(space-around, distribute);
+
+}
+
+.COLS.JUS-AROUND{
+  /* partial supported: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 5.1+ */
+  .justifyContent(space-around, distribute);
+
+}
+
+.ROWS.JUS-BETWEEN{
+  /* partial support:  FF 22+ */
+  .justifyContent(space-between, justify);
+}
+
+.COLS.JUS-BETWEEN{
+  /* partial support:  FF 22+ */
+  .justifyContent(space-between, justify);
+}
+
+
+
+
+
+
+
+
+
+/*
+     _   _    ___ ___ _  _
+   /_\ | |  |_ _/ __| \| |
+  / _ \| |__ | | (_ | .` |
+ /_/ \_\____|___\___|_|\_|
+
+
+-------------------------- cross-axis properties --------------------------
+                      .CENTER .END .STRETCH .BASELINE
+
+These properties manipulates the cross-axis disposition of ALL the children by
+align-items property. By default is .STRETCH so children fill all the cross-axis
+available space (height for .COLS and width for .ROWS)
+
+--------------------------------------------------------------------
+*/
+.ROWS.END,
+.COLS.END{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign(flex-end, end);
+}
+
+.ROWS.CENTER,
+.COLS.CENTER{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  -ms-flex-align:center;
+  align-items:center
+}
+
+.ROWS.STRETCH,
+.COLS.STRETCH{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign();
+}
+
+.ROWS.BASELINE,
+.COLS.BASELINE{
+  /* partial support: IE 10+, safari 6.1+, FF 22+, GC 21+, Opera 12.12+, iOs 7+, Android 4.4+  */
+  .flexAlign(baseline, baseline);
+}
+
+
+/*-------------------------- browsers abbreviations */
+.displayFlex{
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flexDirection(@direction:row,@old-legacy:horizontal){
+  -webkit-flex-direction: @direction;
+  -ms-flex-direction: @direction;
+  flex-direction: @direction;
+  -webkit-box-orient: @old-legacy;
+  -moz-box-orient: @old-legacy;
+}
+
+.justifyContent(@justify:flex-start, @old-legacy:start){
+  -webkit-justify-content: @justify;
+  -ms-flex-pack: @old-legacy;
+  justify-content: @justify;
+  -webkit-box-pack: @old-legacy;
+}
+
+.flexAlign(@align:stretch, @old-legacy:stretch){
+  -webkit-align:@align;
+  -ms-flex-align: @align;
+  -webkit-box-align: @align;
+  align-items: @old-legacy;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+   ___ ___ _    _
+  / __| __| |  | |
+ | (__| _|| |__| |__
+  \___|___|____|____|
+
+--------------- flexible or static items (children) ---------------
+                          .CELL ._FLEX
+
+These are the children inside a flexible container. We call .CELL cause
+they can be vertical or horizontal elements depending on their direct father.
+
+If father is .COLS
+  - main-axis: horizontal, cross-axis: vertical;
+  - .CELL will be 100% height columns and the width depends on their content;
+  - .CELL ._FLEX will be 100% height columns and the width grows to fill all the available (horizontal) space;
+  - .CELL ._150px will be 100% height column with width 150px;
+  - .CELL ._50pct will be 100% height column with width 50%.
+
+If father is .ROWS
+  - main-axis: vertical, cross-axis: horizontal;
+  - .CELL will be 100% width rows and the height depends on their content;
+  - .CELL ._FLEX will be 100% width rows and the height grows to fill all the available (vertical) space;
+  - .CELL ._150px will be 100% width row with height 150px;
+  - .CELL ._50pct will be 100% width row with height 50%.
+
+
+--------------------------------------------------------------------
+*/
+
+.CELL{
+  position: relative;
+  overflow: hidden;
+  .cellNoFlex();
+  .selfAlign();
+}
+
+.CELL._FLEX{ .flex(1) }
+.CELL._FLEX1{ .flex(1) }
+.CELL._FLEX2{ .flex(2) }
+.CELL._FLEX3{ .flex(3) }
+.CELL._FLEX4{ .flex(4) }
+.CELL._FLEX5{ .flex(5) }
+
+
+
+.CELL._ORD0{ .flexOrder(0) }
+.CELL._ORD1{ .flexOrder(1) }
+.CELL._ORD2{ .flexOrder(2) }
+.CELL._ORD3{ .flexOrder(3) }
+.CELL._ORD4{ .flexOrder(4) }
+.CELL._ORD5{ .flexOrder(5) }
+
+
+
+/*
+
+    ___ ___ _    _        _   _    ___ ___ _  _ ___
+  / __| __| |  | |      /_\ | |  |_ _/ __| \| / __|
+ | (__| _|| |__| |__   / _ \| |__ | | (_ | .` \__ \
+  \___|___|____|____| /_/ \_\____|___\___|_|\_|___/
+
+
+-------------------------- cross-axis properties --------------------------
+                    .CENTER .END .STRETCH .BASELINE
+
+.CELL are .AUTO by default so inherit father's cross-axis align
+(by default . STRETCH) so .CELL are .STRETCH by default. With these
+properties we can set a different align to a specific .CELL
+
+--------------------------------------------------------------------
+*/
+
+
+.CELL.AUTO{
+  .selfAlign();
+}
+
+.CELL.START{
+  .selfAlign(flex-start, start);
+}
+
+.CELL.END{
+  .selfAlign(flex-end, end);
+}
+
+.CELL.CENTER{
+  .selfAlign(center, center);
+}
+
+.CELL.STRETCH{
+  .selfAlign(stretch, stretch);
+}
+
+.CELL.BASELINE{
+  .selfAlign(baseline, baseline);
+}
+
+
+.flexOrder(@order:0){
+  -webkit-order: @order !important;
+  -ms-flex-order: @order !important;
+  order: @order !important;
+}
+
+.selfAlign(@align:auto, @old-legacy:auto){
+  -webkit-align-self: @align;
+  -ms-flex-item-align: @old-legacy;
+  align-self: @align;
+}
+
+
+
+.cellNoFlex{
+  -webkit-box-ordinal-group: none;
+  -moz-box-ordinal-group: none;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  -webkit-flex: none;
+  -ms-flex:none;
+  flex: none;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.flex(@v){
+  /* Old Syntax */
+  -webkit-box-flex: @v;
+  -moz-box-flex: @v;
+  /* New Syntax */
+  -webkit-flex: @v;
+  flex: @v;
+  -ms-flex: @v;
+  height: auto;
+  width: auto;
+
+
+}
+
+
+
+
+
+
+
+
+/*
+  ___  _   ___  ___  ___ ___  ___
+ | _ \/_\ |   \|   \| __| _ \/ __|
+ |  _/ _ \| |) | |) | _||   /\__ \
+ |_|/_/ \_\___/|___/|___|_|_\|___/
+
+
+-------------------------- padder --------------------------
+                    .PADDER0, .PADDER5, .PADDER10,.....
+
+Sets an uniform padding inside an .EXTENDER.
+By default you can set a padding of 5, 10, 15, 25, 35, 45, 55 or centered
+--------------------------------------------------------------------
+
+*/
+
+
+
+
+.PADDER-CENTER{
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.PADDER0{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.PADDER,
+.PADDER10{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+
+.PADDER5{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.PADDER15{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  bottom: 15px;
+  right: 15px;
+}
+
+.PADDER25{
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  bottom: 25px;
+  right: 25px;
+}
+
+.PADDER35{
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  bottom: 35px;
+  right: 35px;
+}
+
+.PADDER45{
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  bottom: 45px;
+  right: 45px;
+}
+
+.PADDER55{
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  bottom: 55px;
+  right: 55px;
+}
+
+
+
+
+
+
+/*
+
+  ___  ___ ___  ___  _    _      _   ___ _    ___
+ / __|/ __| _ \/ _ \| |  | |    /_\ | _ ) |  | __|
+ \__ \ (__|   / (_) | |__| |__ / _ \| _ \ |__| _|
+ |___/\___|_|_\\___/|____|____/_/ \_\___/____|___|
+
+
+
+-------------------------- scrollable --------------------------
+                    .SCROLLABLE
+
+Sets a scrollable area with touch support
+--------------------------------------------------------------------
+
+*/
+
+.SCROLLABLE{
+  /* partial supported: iOs 5+ */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+                              ____ ____ ____                  _        _
+                            / ___/ ___/ ___|   _ __ ___   ___| |_ _ __(_) ___ ___
+  _____ _____ _____ _____  | |   \___ \___ \  | '_ ` _ \ / _ \ __| '__| |/ __/ __|  _____ _____ _____ _____
+ |_____|_____|_____|_____| | |___ ___) |__) | | | | | | |  __/ |_| |  | | (__\__ \ |_____|_____|_____|_____|
+                            \____|____/____/  |_| |_| |_|\___|\__|_|  |_|\___|___/
+
+
+*/
+
+
+
+/*
+ ___ __  _______ ___ _  _ ___  ___ ___
+ | __\ \/ /_   _| __| \| |   \| __| _ \
+ | _| >  <  | | | _|| .` | |) | _||   /
+ |___/_/\_\ |_| |___|_|\_|___/|___|_|_\
+
+
+-------------------------- .extender() or .ex() --------------------------
+
+  css class to create an .EXTENDER
+
+  --------------------------------------------------------------------
+*/
+
+.extender,
+.ex{
+  .EXTENDER();
+}
+
+.padder(@v:10px){
+  position: absolute;
+  top: @v;
+  left: @v;
+  bottom: @v;
+  right: @v;
+}
+
+.padder-center{
+  .PADDER-CENTER();
+}
+
+.scrollable(){
+  .SCROLLABLE();
+}
+
+/*
+
+   ___ ___  _    ___
+  / __/ _ \| |  / __|
+ | (_| (_) | |__\__ \
+  \___\___/|____|___/
+
+-------------------------- .cols() --------------------------
+
+  css class to create a .COLS
+
+  example:
+  .your_css_class{
+    .cols();
+  }
+
+  accepts a parameter (@v) to specify justifications
+  @v : reverse | jus-center | jus-end | jus-around | jus-between
+
+  --------------------------------------------------------------------
+*/
+
+.cols(){
+  .COLS();
+}
+
+.cols(@v) when (@v = reverse){
+  .COLS();
+  .COLS.REVERSE();
+}
+
+.cols(@v) when (@v = jus-center){
+  .COLS();
+  .COLS.JUS-CENTER();
+}
+
+.cols(@v) when (@v = jus-end){
+  .COLS();
+  .COLS.JUS-END();
+}
+
+.cols(@v) when (@v = jus-around){
+  .COLS();
+  .COLS.JUS-AROUND();
+}
+
+.cols(@v) when (@v = jus-between){
+  .COLS();
+  .COLS.JUS-BETWEEN();
+}
+
+
+
+
+
+
+/*
+
+  ___  _____      _____
+ | _ \/ _ \ \    / / __|
+ |   / (_) \ \/\/ /\__ \
+ |_|_\\___/ \_/\_/ |___/
+
+
+-------------------------- .rows() --------------------------
+
+  css class to create a .ROWS
+
+  example:
+  .your_css_class{
+    .rows();
+  }
+
+  accepts a parameter (@v) to specify justifications
+  @v : reverse | jus-center | jus-end | jus-around | jus-between
+
+  --------------------------------------------------------------------
+*/
+
+
+
+.rows(){
+  .ROWS();
+}
+
+
+.rows(@v) when (@v = reverse){
+  .ROWS();
+  .ROWS.REVERSE();
+}
+
+.rows(@v) when (@v = jus-center){
+  .ROWS();
+  .ROWS.JUS-CENTER();
+}
+
+.rows(@v) when (@v = jus-end){
+  .ROWS();
+  .ROWS.JUS-END();
+}
+
+.rows(@v) when (@v = jus-around){
+  .ROWS();
+  .ROWS.JUS-AROUND();
+}
+
+.rows(@v) when (@v = jus-between){
+  .ROWS();
+  .ROWS.JUS-BETWEEN();
+}
+
+
+
+
+
+
+
+
+/*
+
+   ___ ___ _    _
+  / __| __| |  | |
+ | (__| _|| |__| |__
+  \___|___|____|____|
+
+
+-------------------------- .cell() --------------------------
+
+    css class to create a .CELL
+
+    for flexible one:
+    .your_css_class{
+      .flex();
+    }
+
+    for static one:
+    .your_css_class{
+      .cell();
+    }
+
+    accepts a parameter (@v) to specify alignment
+    @v : auto | start | end | center | stretch | baseline
+
+    in addition you can use .w() or .h() to set with or height of the cell.
+
+
+    .your_css_class_container{
+      .rows();
+
+        .your_css_class_item_1{
+          .cell();
+          .h(200px);
+        }
+
+    }
+
+    .your_css_class_container{
+      .cols();
+
+        .your_css_class_item_1{
+          .cell();
+          .w(200px);
+        }
+
+    }
+
+    .h() and .w() accept 2 parameters:
+    - the first value regards the main-axis metrics so height for .h() and width for .w()
+    - the second parameter (optional) instead regards cross-axis metrics.
+      if set this parameter enables cross axis metrics ,by passing a parameter in .cell(), so you can white
+
+
+    .your_css_class_container{
+    .cols();
+
+      .your_css_class_item_1{
+        .cell(center);
+        .w(200px,50px);
+      }
+
+    }
+
+
+
+
+  --------------------------------------------------------------------
+*/
+
+
+
+.cell(){
+  .CELL();
+}
+
+.cell(@v) when (@v = auto){
+  .CELL();
+  .CELL.AUTO();
+}
+
+.cell(@v) when (@v = start){
+  .CELL();
+  .CELL.START();
+}
+
+.cell(@v) when (@v = end){
+  .CELL();
+  .CELL.END();
+}
+
+.cell(@v) when (@v = center){
+  .CELL();
+  .CELL.CENTER();
+}
+
+.cell(@v) when (@v = stretch){
+  .CELL();
+  .CELL.STRETCH();
+}
+
+.cell(@v) when (@v = baseline){
+  .CELL();
+  .CELL.BASELINE();
+}
+
+
+.flex{
+  .CELL();
+  .CELL._FLEX();
+}
+
+
+
+
+.w(@w,@a:100%){
+  width: @w;
+  height: @a;
+}
+
+.h(@h,@a:100%){
+  height: @h;
+  width: @a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+  ___ _   _ _     ___ _   _ _____   __  __ _____ _____ ____  ___ ____ ____
+ |_ _| \ | | |   |_ _| \ | | ____| |  \/  | ____|_   _|  _ \|_ _/ ___/ ___|
+  | ||  \| | |    | ||  \| |  _|   | |\/| |  _|   | | | |_) || | |   \___ \
+  | || |\  | |___ | || |\  | |___  | |  | | |___  | | |  _ < | | |___ ___) |
+ |___|_| \_|_____|___|_| \_|_____| |_|  |_|_____| |_| |_| \_\___\____|____/
+
+
+-------------------------- _10px or _10pct --------------------------
+
+
+  <div class="COLS">
+    <div class="CELL _200px">
+    <div class="CELL _FLEX">
+  </div>
+
+  <div class="ROWS">
+    <div class="CELL _20pct">
+    <div class="CELL _FLEX">
+  </div>
+
+
+  Percentage metrics - pct: from 5% to 95% (5 by 5);
+  Pixel metrics - px: from 5px to 400px (5 by 5)
+
+
+*/
+
+
+.ROWS >.CELL {
+
+  &._5pct { .pctH(5) } &._10pct { .pctH(10) } &._15pct { .pctH(15) } &._20pct { .pctH(20) } &._25pct { .pctH(25) } &._30pct { .pctH(30) } &._35pct { .pctH(35) } &._40pct { .pctH(40) } &._45pct { .pctH(45) } &._50pct { .pctH(50) } &._55pct { .pctH(55) } &._60pct { .pctH(60) } &._65pct { .pctH(65) } &._70pct { .pctH(70) } &._75pct { .pctH(75) } &._80pct { .pctH(80) } &._85pct { .pctH(85) } &._90pct { .pctH(90) } &._95pct { .pctH(95) }
+  &._5px { .pxH(5) } &._10px { .pxH(10) } &._15px { .pxH(15) } &._20px { .pxH(20) } &._25px { .pxH(25) } &._30px { .pxH(30) } &._35px { .pxH(35) } &._40px { .pxH(40) } &._45px { .pxH(45) } &._50px { .pxH(50) } &._55px { .pxH(55) } &._60px { .pxH(60) } &._65px { .pxH(65) } &._70px { .pxH(70) } &._75px { .pxH(75) } &._80px { .pxH(80) } &._85px { .pxH(85) } &._90px { .pxH(90) } &._95px { .pxH(95) } &._100px { .pxH(100) } &._105px { .pxH(105) } &._110px { .pxH(110) } &._115px { .pxH(115) } &._120px { .pxH(120) } &._125px { .pxH(125) } &._130px { .pxH(130) } &._135px { .pxH(135) } &._140px { .pxH(140) } &._145px { .pxH(145) } &._150px { .pxH(150) } &._155px { .pxH(155) } &._160px { .pxH(160) } &._165px { .pxH(165) } &._170px { .pxH(170) } &._175px { .pxH(175) } &._180px { .pxH(180) } &._185px { .pxH(185) } &._190px { .pxH(190) } &._195px { .pxH(195) } &._200px { .pxH(200) } &._205px { .pxH(205) } &._210px { .pxH(210) } &._215px { .pxH(215) } &._220px { .pxH(220) } &._225px { .pxH(225) } &._230px { .pxH(230) } &._235px { .pxH(235) } &._240px { .pxH(240) } &._245px { .pxH(245) } &._250px { .pxH(250) } &._255px { .pxH(255) } &._260px { .pxH(260) } &._265px { .pxH(265) } &._270px { .pxH(270) } &._275px { .pxH(275) } &._280px { .pxH(280) } &._285px { .pxH(285) } &._290px { .pxH(290) } &._295px { .pxH(295) } &._300px { .pxH(300) } &._305px { .pxH(305) } &._310px { .pxH(310) } &._315px { .pxH(315) } &._320px { .pxH(320) } &._325px { .pxH(325) } &._330px { .pxH(330) } &._335px { .pxH(335) } &._340px { .pxH(340) } &._345px { .pxH(345) } &._350px { .pxH(350) } &._355px { .pxH(355) } &._360px { .pxH(360) } &._365px { .pxH(365) } &._370px { .pxH(370) } &._375px { .pxH(375) } &._380px { .pxH(380) } &._385px { .pxH(385) } &._390px { .pxH(390) } &._395px { .pxH(395) } &._400px { .pxH(400) }
+
+}
+
+
+.COLS >.CELL {
+
+  &._5pct { .pctW(5) } &._10pct { .pctW(10) } &._15pct { .pctW(15) } &._20pct { .pctW(20) } &._25pct { .pctW(25) } &._30pct { .pctW(30) } &._35pct { .pctW(35) } &._40pct { .pctW(40) } &._45pct { .pctW(45) } &._50pct { .pctW(50) } &._55pct { .pctW(55) } &._60pct { .pctW(60) } &._65pct { .pctW(65) } &._70pct { .pctW(70) } &._75pct { .pctW(75) } &._80pct { .pctW(80) } &._85pct { .pctW(85) } &._90pct { .pctW(90) } &._95pct { .pctW(95) }
+  &._5px { .pxW(5) } &._10px { .pxW(10) } &._15px { .pxW(15) } &._20px { .pxW(20) } &._25px { .pxW(25) } &._30px { .pxW(30) } &._35px { .pxW(35) } &._40px { .pxW(40) } &._45px { .pxW(45) } &._50px { .pxW(50) } &._55px { .pxW(55) } &._60px { .pxW(60) } &._65px { .pxW(65) } &._70px { .pxW(70) } &._75px { .pxW(75) } &._80px { .pxW(80) } &._85px { .pxW(85) } &._90px { .pxW(90) } &._95px { .pxW(95) } &._100px { .pxW(100) } &._105px { .pxW(105) } &._110px { .pxW(110) } &._115px { .pxW(115) } &._120px { .pxW(120) } &._125px { .pxW(125) } &._130px { .pxW(130) } &._135px { .pxW(135) } &._140px { .pxW(140) } &._145px { .pxW(145) } &._150px { .pxW(150) } &._155px { .pxW(155) } &._160px { .pxW(160) } &._165px { .pxW(165) } &._170px { .pxW(170) } &._175px { .pxW(175) } &._180px { .pxW(180) } &._185px { .pxW(185) } &._190px { .pxW(190) } &._195px { .pxW(195) } &._200px { .pxW(200) } &._205px { .pxW(205) } &._210px { .pxW(210) } &._215px { .pxW(215) } &._220px { .pxW(220) } &._225px { .pxW(225) } &._230px { .pxW(230) } &._235px { .pxW(235) } &._240px { .pxW(240) } &._245px { .pxW(245) } &._250px { .pxW(250) } &._255px { .pxW(255) } &._260px { .pxW(260) } &._265px { .pxW(265) } &._270px { .pxW(270) } &._275px { .pxW(275) } &._280px { .pxW(280) } &._285px { .pxW(285) } &._290px { .pxW(290) } &._295px { .pxW(295) } &._300px { .pxW(300) } &._305px { .pxW(305) } &._310px { .pxW(310) } &._315px { .pxW(315) } &._320px { .pxW(320) } &._325px { .pxW(325) } &._330px { .pxW(330) } &._335px { .pxW(335) } &._340px { .pxW(340) } &._345px { .pxW(345) } &._350px { .pxW(350) } &._355px { .pxW(355) } &._360px { .pxW(360) } &._365px { .pxW(365) } &._370px { .pxW(370) } &._375px { .pxW(375) } &._380px { .pxW(380) } &._385px { .pxW(385) } &._390px { .pxW(390) } &._395px { .pxW(395) } &._400px { .pxW(400) }
+
+}
+
+
+.pxW(@v) { width: ~"@{v}px" !important}
+.pctW(@v) { width: ~"@{v}%" !important}
+.pxH(@v) { height: ~"@{v}px" !important}
+.pctH(@v) { height: ~"@{v}%" !important}
+
+
+

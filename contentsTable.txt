@@ -1,0 +1,50 @@
+    ----------- CORE -----------
+
+    all files inside this folder will be compiled and generate core.css
+    sources/core/*.less  ======> build/core.css
+
+    flexScaffolding.less
+        - defines flexible elements like ROWS, COLS, CELL and their alignments
+        - provides shortcuts like _FLEX, _150px or _60pct for in HTML uses
+        - provides shortcuts for flexScaffolding.less classes like .cols() for .COLS and main-axis justification and cross-axis alignments
+
+    mediaQuery.less
+        - defines media ranges and resolutions keywords like @mobile, @desktop but also device orientations and pixel density
+
+
+
+
+    ----------- PLUGINS -----------
+
+    all files inside this folder will be compiled and generate plugins.css
+    sources/plugins/*.less =====> build/plugins.css
+
+    - resolutionChecker.less
+        DESCRIPTION: adds :before and :after pseudo-tags to body tag to check current device and orientation (bottom-left corner of the page)
+        DEPENDENCIES: mediaQuery.less
+
+    - icons.less
+        DESCRIPTION: create inline shortcuts for icon (fontawesome and themify) fa-home or ti-arrow-up
+        DEPENDENCIES: none
+
+
+
+
+    ----------- CUSTOMS -----------
+
+    your app files.
+    all files inside this folder will be compiled and generate customs.css
+    sources/customs/*.less  ======> build/customs.css
+
+    - all .less files in this directory will built in customs.css
+    - use this directory for your custom app less files
+
+
+
+
+    Grunt tasks:
+        - less: create 3 css builds (core, demo and plugins) each one from respective folders;
+        - watch: initializes a watcher on all less files in CSS folder;
+        - cssmin: minify all css files inside build folder and generates a cssPlus-v.0.2-build.css
+        - clean: a basilar tool to delete a file
+        - minifyBuild: less + clean + cssmin

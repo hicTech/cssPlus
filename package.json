@@ -1,0 +1,38 @@
+{
+  "name": "cssPlus",
+  "version": "1.0.0",
+  "description": "layout library based on flexbox",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-watch": "^0.6.1",
+    "jit-grunt": "^0.9.1",
+    "grunt-contrib-less": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hicTech/cssPlus.git"
+  },
+  "keywords": [
+    "flexbox",
+    "layout",
+    "css",
+    "cssPlus"
+  ],
+  "author": "hictech.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hicTech/cssPlus/issues"
+  },
+  "homepage": "www.css.plus"
+}
