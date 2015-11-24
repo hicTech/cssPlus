@@ -24,7 +24,7 @@ CssPlus want to provide a simple and fast way to realize flexible and responsive
 <a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveController.html">Responsive controller</a><br>
 <a href="http://hictech.github.io/cssPlusWebsite/devicesResponsiveDemo.html">Responsive UI</a><br>
 <a href="http://hictech.github.io/cssPlusWebsite/resolutionChecker.html">Resolutions Checker</a><br>
-<img src="http://localhost:8888/cssPlusWebsite/img/qrcode.png">
+<img src="http://hictech.github.io/cssPlusWebsite/img/qrcode.png">
 
 
 
